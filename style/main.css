@@ -1,4 +1,3 @@
-/* Original CSS content from style tag */
 :root {
     --tv-width: 800px;
     --tv-height: 450px;
@@ -123,7 +122,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
+    gap: 12px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.5);
     border: 1px solid #444;
     transition: opacity 0.3s ease;
@@ -168,12 +167,11 @@ body {
 .volume-buttons {
     display: flex;
     gap: 15px;
-    width: 80%;
+    width: 75%;
     justify-content: center;
     background: rgba(0,0,0,0.15);
     padding: 8px;
     border-radius: 15px;
-    margin: 10px 0;
 }
 
 .volume-button {
@@ -193,29 +191,21 @@ body {
     transform: scale(1.1);
 }
 
+.channel-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 80%;
+}
+
 .channel-nav {
     display: flex;
-    flex-direction: row;
-    gap: 15px;
+    flex-direction: column;
+    gap: 6px;
     width: 80%;
-    justify-content: space-between;
+    justify-content: center;
 }
 
-.volume-controls {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    width: 45%;
-}
-
-.channel-controls {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    width: 45%;
-}
-
-.volume-button,
 .channel-nav-button {
     background: linear-gradient(145deg, #333, #222);
     border: 1px solid #444;
@@ -230,12 +220,6 @@ body {
     box-shadow: 0 2px 4px rgba(0,0,0,0.3);
 }
 
-.volume-button:hover,
-.channel-nav-button:hover {
-    background: #666;
-    transform: scale(1.05);
-}
-
 .remote-container::before {
     content: "TÜRK TV";
     position: absolute;
@@ -245,8 +229,9 @@ body {
     letter-spacing: 1px;
 }
 
-.channel-buttons {
-    display: none;
+.channel-nav-button:hover {
+    background: #666;
+    transform: scale(1.05);
 }
 
 .volume-indicator {
@@ -343,7 +328,7 @@ body {
     top: 50%;
     transform: translate(-50%, -50%);
     z-index: 2;
-    max-height: 80vh;
+    max-height: 70vh;
     overflow-y: auto;
     background: rgba(0,0,0,0.7);
     padding: 15px;
@@ -355,24 +340,6 @@ body {
     margin: 0 auto;
     transition: opacity 0.3s ease, transform 0.3s ease;
     opacity: 0;
-}
-
-.channel-list::-webkit-scrollbar {
-    width: 8px;
-}
-
-.channel-list::-webkit-scrollbar-track {
-    background: rgba(0, 0, 0, 0.2);
-    border-radius: 4px;
-}
-
-.channel-list::-webkit-scrollbar-thumb {
-    background: rgba(255, 255, 255, 0.3);
-    border-radius: 4px;
-}
-
-.channel-list::-webkit-scrollbar-thumb:hover {
-    background: rgba(255, 255, 255, 0.4);
 }
 
 .channel-list.visible {
@@ -491,9 +458,7 @@ body {
         right: 20px;
         top: 50%;
         transform: translateY(-50%);
-        width: 240px; /* Same as mobile width */
-        height: auto;
-        max-height: 80vh;
+        height: var(--remote-height);
     }
 
     .remote-container.hidden {
@@ -504,43 +469,6 @@ body {
     
     .remote-container:hover {
         transform: translateY(-50%);
-    }
-
-    .channel-nav {
-        width: 85%;
-    }
-
-    .volume-controls,
-    .channel-controls {
-        width: 45%;
-    }
-    
-    .channel-pad {
-        width: 85%;
-        gap: 6px;
-        padding: 6px;
-    }
-
-    .volume-buttons {
-        width: 85%;
-        gap: 10px;
-        padding: 6px;
-    }
-
-    .channel-nav {
-        width: 85%;
-        align-items: center;
-    }
-
-    .channel-nav-button {
-        width: 80%;
-    }
-    
-    .remote-button,
-    .volume-button,
-    .channel-nav-button {
-        font-size: 0.8em;
-        padding: 5px;
     }
 }
     
@@ -568,8 +496,8 @@ body {
     right: 20px;
     transform: translateY(-50%);
     background: rgba(0,0,0,0.8);
-    padding: 15px;  
-    border-radius: 8px;  
+    padding: 20px;
+    border-radius: 10px;
     display: none;
     z-index: 1000;
 }
@@ -577,19 +505,19 @@ body {
 .menu-buttons {
     display: flex;
     flex-direction: column;
-    gap: 8px;  
+    gap: 10px;
 }
 
 .menu-option {
     background: linear-gradient(145deg, #333, #222);
     border: 1px solid #444;
-    border-radius: 6px;  
+    border-radius: 8px;
     color: white;
-    padding: 8px 15px;  
+    padding: 12px 25px;
     cursor: pointer;
     transition: all 0.3s ease;
-    font-size: 0.9em;  
-    min-width: 150px;  
+    font-size: 1em;
+    min-width: 180px;
     text-align: center;
 }
 
@@ -660,96 +588,4 @@ body {
 .remote-container .close-button {
     top: 5px;
     right: 5px;
-}
-
-.keyboard-overlay {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: rgba(0,0,0,0.9);
-    padding: 20px;
-    border-radius: 12px;
-    display: none;
-    z-index: 1000;
-    max-width: 300px;
-    width: 85%;
-}
-
-.keyboard-guide {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
-
-.keyboard-guide-title {
-    font-size: 1.1em;
-    font-weight: bold;
-    text-align: center;
-    margin-bottom: 10px;
-    border-bottom: 1px solid rgba(255,255,255,0.2);
-    padding-bottom: 8px;
-}
-
-.keyboard-guide-item {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    font-size: 0.9em;
-}
-
-.keyboard-guide-key {
-    background: linear-gradient(145deg, #333, #222);
-    border: 1px solid #444;
-    border-radius: 6px;
-    color: white;
-    padding: 4px 8px;
-    font-size: 0.9em;
-    min-width: 30px;
-    text-align: center;
-}
-
-@media (max-width: 768px) {
-    .keyboard-overlay {
-        width: 80%;
-        padding: 15px;
-    }
-}
-
-/* Add new styles for channel categories */
-.channel-categories {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.category {
-    background: rgba(0, 0, 0, 0.3);
-    border-radius: 8px;
-    padding: 15px;
-}
-
-.category h4 {
-    color: #fff;
-    margin: 0 0 10px 0;
-    padding-bottom: 8px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    font-size: 1em;
-}
-
-.category ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-.category li {
-    padding: 5px 0;
-    cursor: pointer;
-    transition: all 0.2s ease;
-}
-
-.category li:hover {
-    color: #fff;
-    transform: translateX(5px);
 }
