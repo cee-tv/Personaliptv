@@ -1,153 +1,572 @@
 const channels = {
-    tv5_hd: {
-    name: "TV5 HD",
-    url: "https://qp-pldt-live-grp-02-prod.akamaized.net/out/u/tv5_hd.mpd",
-    number: 1,
-    drmConfig: {
-        clearKeys: {
-            "2615129ef2c846a9bbd43a641c7303ef": "07c7f996b1734ea288641a68e1cfdc4d"
-        
-},
-
-rptv_hd: {
-    name: "RPTV HD",
-    url: "https://qp-pldt-live-grp-03-prod.akamaized.net/out/u/cnn_rptv_prod_hd.mpd",
-    number: 2,
-    drmConfig: {
-        clearKeys: {
-            "1917f4caf2364e6d9b1507326a85ead6": "a1340a251a5aa63a9b0ea5d9d7f67595"
-        
-},
-
-true_fm_tv: {
-    name: "True FM TV",
-    url: "https://qp-pldt-live-grp-08-prod.akamaized.net/out/u/truefm_tv.mpd",
-    number: 3,
-    drmConfig: {
-        clearKeys: {
-            "0559c95496d44fadb94105b9176c3579": "40d8bb2a46ffd03540e0c6210ece57ce"
-        
-},
-
-ptv_4: {
-    name: "PTV 4",
-    url: "https://qp-pldt-live-grp-02-prod.akamaized.net/out/u/cg_ptv4_sd.mpd",
-    number: 4,
-    drmConfig: {
-        clearKeys: {
-            "71a130a851b9484bb47141c8966fb4a3": "ad1f003b4f0b31b75ea4593844435600"
-        
-},
-
-ibc_13: {
-    name: "IBC 13",
-    url: "https://qp-pldt-live-grp-07-prod.akamaized.net/out/u/ibc13_sd.mpd",
-    number: 5,
-    drmConfig: {
-        clearKeys: {
-            "04e292bc99bd4ccba89e778651914254": "ff0a62bdf8920ce453fe680330b563a5"
-        
-},
-
-a2z: {
-    name: "A2Z",
-    url: "https://qp-pldt-live-grp-02-prod.akamaized.net/out/u/cg_a2z.mpd",
-    number: 6,
-    drmConfig: {
-        clearKeys: {
-            "f703e4c8ec9041eeb5028ab4248fa094": "c22f2162e176eee6273a5d0b68d19530"
-        
-},
-
-one_ph: {
-    name: "One PH",
-    url: "https://qp-pldt-live-grp-04-prod.akamaized.net/out/u/oneph_sd.mpd",
-    number: 7,
-    drmConfig: {
-        clearKeys: {
-            "92834ab4a7e1499b90886c5d49220e46": "a7108d9a6cfcc1b7939eb111daf09ab3"
-        
-},
-
-one_news: {
-    name: "One News",
-    url: "https://qp-pldt-live-grp-04-prod.akamaized.net/out/u/onenews_hd1.mpd",
-    number: 8,
-    drmConfig: {
-        clearKeys: {
-            "d39eb201ae494a0b98583df4d110e8dd": "6797066880d344422abd3f5eda41f45f"
-        
-},
-
-buko: {
-    name: "Buko",
-    url: "https://qp-pldt-live-grp-06-prod.akamaized.net/out/u/cg_buko_sd.mpd",
-    number: 9,
-    drmConfig: {
-        clearKeys: {
-            "d273c085f2ab4a248e7bfc375229007d": "7932354c3a84f7fc1b80efa6bcea0615"
-        
-},
-
-sari_sari: {
-    name: "Sari-Sari",
-    url: "https://qp-pldt-live-grp-06-prod.akamaized.net/out/u/cg_sari_sari_sd.mpd",
-    number: 10,
-    drmConfig: {
-        clearKeys: {
-            "0a7ab3612f434335aa6e895016d8cd2d": "b21654621230ae21714a5cab52daeb9d"
-        
-},
-
-pba_rush: {
-    name: "PBA Rush",
-    url: "https://qp-pldt-live-grp-01-prod.akamaized.net/out/u/cg_pbarush_hd1.mpd",
-    number: 11,
-    drmConfig: {
-        clearKeys: {
-            "76dc29dd87a244aeab9e8b7c5da1e5f3": "95b2f2ffd4e14073620506213b62ac82"
-        
-},
-
-one_sports_hd: {
-    name: "One Sports HD",
-    url: "https://qp-pldt-live-grp-07-prod.akamaized.net/out/u/cg_onesports_hd.mpd",
-    number: 12,
-    drmConfig: {
-        clearKeys: {
-            "53c3bf2eba574f639aa21f2d4409ff11": "3de28411cf08a64ea935b9578f6d0edd"
-        
-},
-
-one_sports_plus: {
-    name: "One Sports+",
-    url: "https://qp-pldt-live-grp-03-prod.akamaized.net/out/u/cg_onesportsplus_hd1.mpd",
-    number: 13,
-    drmConfig: {
-        clearKeys: {
-            "322d06e9326f4753a7ec0908030c13d8": "1e3e0ca32d421fbfec86feced0efefda"
-        
-},
-
-uaap_varsity_channel: {
-    name: "UAAP Varsity Channel",
-    url: "https://qp-pldt-live-grp-04-prod.akamaized.net/out/u/cg_uaap_cplay_sd.mpd",
-    number: 14,
-    drmConfig: {
-        clearKeys: {
-            "95588338ee37423e99358a6d431324b9": "6e0f50a12f36599a55073868f814e81e"
-        
-},
-
-mptv: {
-    name: "MPTV",
-    url: "https://qp-pldt-live-grp-09-prod.akamaized.net/out/u/cg_mptv.mpd",
-    number: 15,
-    drmConfig: {
-        clearKeys: {
-            "6aab8f40536f4ea98e7c97b8f3aa7d4e": "139aa5a55ade471faaddacc4f4de8807"
-        
-}
+    tv5hd: {
+        name: "TV5 HD",
+        url: "https://qp-pldt-live-grp-02-prod.akamaized.net/out/u/tv5_hd.mpd",
+        number: 1,
+        drmConfig: {
+            clearKeys: {
+                '2615129ef2c846a9bbd43a641c7303ef': '07c7f996b1734ea288641a68e1cfdc4d'
+    },
+    rptvhd: {
+        name: "RPTV HD",
+        url: "https://qp-pldt-live-grp-03-prod.akamaized.net/out/u/cnn_rptv_prod_hd.mpd",
+        number: 2,
+        drmConfig: {
+            clearKeys: {
+                '1917f4caf2364e6d9b1507326a85ead6': 'a1340a251a5aa63a9b0ea5d9d7f67595' 
+    },
+    trthaber: {
+        name: "TRT Haber",
+        url: "https://tv-trthaber.medya.trt.com.tr/master.m3u8",
+        number: 3,
+        drmConfig: {
+            clearKeys: {
+                '07aa813bf2c147748046edd930f7736e': '3bd6688b8b44e96201e753224adfc8fb' 
+    },
+    trtspor: {
+        name: "TRT Spor",
+        url: "https://tv-trtspor1.medya.trt.com.tr/master.m3u8",
+        number: 4,
+        drmConfig: {
+            clearKeys: {
+                '07aa813bf2c147748046edd930f7736e': '3bd6688b8b44e96201e753224adfc8fb' 
+    },
+    trtbelgesel: {
+        name: "TRT Belgesel",
+        url: "https://tv-trtbelgesel.medya.trt.com.tr/master.m3u8",
+        number: 5,
+        drmConfig: {
+            clearKeys: {
+                '07aa813bf2c147748046edd930f7736e': '3bd6688b8b44e96201e753224adfc8fb' 
+    },
+    trtcocuk: {
+        name: "TRT Çocuk",
+        url: "https://tv-trtcocuk.medya.trt.com.tr/master.m3u8",
+        number: 6,
+        drmConfig: {
+            clearKeys: {
+                '07aa813bf2c147748046edd930f7736e': '3bd6688b8b44e96201e753224adfc8fb' 
+    },
+    showtv: {
+        name: "Show TV",
+        url: "https://ciner-live.daioncdn.net/showtv/showtv.m3u8",
+        number: 7,
+        drmConfig: {
+            clearKeys: {
+                '07aa813bf2c147748046edd930f7736e': '3bd6688b8b44e96201e753224adfc8fb' 
+    },
+    startv: {
+        name: "Star TV",
+        url: "https://dogus-live.daioncdn.net/startv/startv.m3u8",
+        number: 7,
+        drmConfig: {
+            clearKeys: {
+                '07aa813bf2c147748046edd930f7736e': '3bd6688b8b44e96201e753224adfc8fb' 
+    },
+    tv8: {
+        name: "TV8",
+        url: "https://tv8-live.daioncdn.net/tv8/tv8.m3u8",
+        number: 8,
+        drmConfig: {
+            clearKeys: {
+                '07aa813bf2c147748046edd930f7736e': '3bd6688b8b44e96201e753224adfc8fb' 
+    },
+    beyaztv: {
+        name: "Beyaz TV",
+        url: "https://beyaztv-live.daioncdn.net/beyaztv/beyaztv.m3u8",
+        number: 9,
+        drmConfig: {
+            clearKeys: {
+                '07aa813bf2c147748046edd930f7736e': '3bd6688b8b44e96201e753224adfc8fb' 
+    },
+    ntv: {
+        name: "NTV",
+        url: "https://dogus-live.daioncdn.net/ntv/ntv.m3u8",
+        number: 10,
+        drmConfig: {
+            clearKeys: {
+                '07aa813bf2c147748046edd930f7736e': '3bd6688b8b44e96201e753224adfc8fb' 
+    },
+    trt2: {
+        name: "TRT 2",
+        url: "https://tv-trt2.medya.trt.com.tr/master.m3u8",
+        number: 11,
+        drmConfig: {
+            clearKeys: {
+                '07aa813bf2c147748046edd930f7736e': '3bd6688b8b44e96201e753224adfc8fb' 
+    },
+    numberone: {
+        name: "Number One",
+        url: "https://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/broadcast_5c9e17cd59e8b.smil/playlist.m3u8",
+        number: 13,
+        drmConfig: {
+            clearKeys: {
+                '07aa813bf2c147748046edd930f7736e': '3bd6688b8b44e96201e753224adfc8fb' 
+    },
+    haberturk: {
+        name: "Habertürk",
+        url: "https://ciner-live.daioncdn.net/haberturktv/haberturktv.m3u8",
+        number: 12,
+        drmConfig: {
+            clearKeys: {
+                '07aa813bf2c147748046edd930f7736e': '3bd6688b8b44e96201e753224adfc8fb' 
+    },
+    trt1: {
+        name: "TRT 1",
+        url: "https://tv-trt1.medya.trt.com.tr/master.m3u8",
+        number: 1,
+        drmConfig: {
+            clearKeys: {
+                '07aa813bf2c147748046edd930f7736e': '3bd6688b8b44e96201e753224adfc8fb'
+    },
+    trtmuzik: {
+        name: "TRT Müzik",
+        url: "https://tv-trtmuzik.medya.trt.com.tr/master.m3u8",
+        number: 14,
+        drmConfig: {
+            clearKeys: {
+                '07aa813bf2c147748046edd930f7736e': '3bd6688b8b44e96201e753224adfc8fb' 
+    },
+    trthaber: {
+        name: "TRT Haber",
+        url: "https://tv-trthaber.medya.trt.com.tr/master.m3u8",
+        number: 2,
+        drmConfig: {
+            clearKeys: {
+                '07aa813bf2c147748046edd930f7736e': '3bd6688b8b44e96201e753224adfc8fb' 
+    },
+    trtspor: {
+        name: "TRT Spor",
+        url: "https://tv-trtspor1.medya.trt.com.tr/master.m3u8",
+        number: 3,
+        drmConfig: {
+            clearKeys: {
+                '07aa813bf2c147748046edd930f7736e': '3bd6688b8b44e96201e753224adfc8fb' 
+    },
+    trtbelgesel: {
+        name: "TRT Belgesel",
+        url: "https://tv-trtbelgesel.medya.trt.com.tr/master.m3u8",
+        number: 4,
+        drmConfig: {
+            clearKeys: {
+                '07aa813bf2c147748046edd930f7736e': '3bd6688b8b44e96201e753224adfc8fb' 
+    },
+    trtcocuk: {
+        name: "TRT Çocuk",
+        url: "https://tv-trtcocuk.medya.trt.com.tr/master.m3u8",
+        number: 5,
+        drmConfig: {
+            clearKeys: {
+                '07aa813bf2c147748046edd930f7736e': '3bd6688b8b44e96201e753224adfc8fb' 
+    },
+    showtv: {
+        name: "Show TV",
+        url: "https://ciner-live.daioncdn.net/showtv/showtv.m3u8",
+        number: 6,
+        drmConfig: {
+            clearKeys: {
+                '07aa813bf2c147748046edd930f7736e': '3bd6688b8b44e96201e753224adfc8fb' 
+    },
+    startv: {
+        name: "Star TV",
+        url: "https://dogus-live.daioncdn.net/startv/startv.m3u8",
+        number: 7,
+        drmConfig: {
+            clearKeys: {
+                '07aa813bf2c147748046edd930f7736e': '3bd6688b8b44e96201e753224adfc8fb' 
+    },
+    tv8: {
+        name: "TV8",
+        url: "https://tv8-live.daioncdn.net/tv8/tv8.m3u8",
+        number: 8,
+        drmConfig: {
+            clearKeys: {
+                '07aa813bf2c147748046edd930f7736e': '3bd6688b8b44e96201e753224adfc8fb' 
+    },
+    beyaztv: {
+        name: "Beyaz TV",
+        url: "https://beyaztv-live.daioncdn.net/beyaztv/beyaztv.m3u8",
+        number: 9,
+        drmConfig: {
+            clearKeys: {
+                '07aa813bf2c147748046edd930f7736e': '3bd6688b8b44e96201e753224adfc8fb' 
+    },
+    ntv: {
+        name: "NTV",
+        url: "https://dogus-live.daioncdn.net/ntv/ntv.m3u8",
+        number: 10,
+        drmConfig: {
+            clearKeys: {
+                '07aa813bf2c147748046edd930f7736e': '3bd6688b8b44e96201e753224adfc8fb' 
+    },
+    trt2: {
+        name: "TRT 2",
+        url: "https://tv-trt2.medya.trt.com.tr/master.m3u8",
+        number: 11,
+        drmConfig: {
+            clearKeys: {
+                '07aa813bf2c147748046edd930f7736e': '3bd6688b8b44e96201e753224adfc8fb' 
+    },
+    numberone: {
+        name: "Number One",
+        url: "https://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/broadcast_5c9e17cd59e8b.smil/playlist.m3u8",
+        number: 13,
+        drmConfig: {
+            clearKeys: {
+                '07aa813bf2c147748046edd930f7736e': '3bd6688b8b44e96201e753224adfc8fb' 
+    },
+    haberturk: {
+        name: "Habertürk",
+        url: "https://ciner-live.daioncdn.net/haberturktv/haberturktv.m3u8",
+        number: 12,
+        drmConfig: {
+            clearKeys: {
+                '07aa813bf2c147748046edd930f7736e': '3bd6688b8b44e96201e753224adfc8fb' 
+    },
+    trt1: {
+        name: "TRT 1",
+        url: "https://tv-trt1.medya.trt.com.tr/master.m3u8",
+        number: 1,
+        drmConfig: {
+            clearKeys: {
+                '07aa813bf2c147748046edd930f7736e': '3bd6688b8b44e96201e753224adfc8fb'
+    },
+    trtmuzik: {
+        name: "TRT Müzik",
+        url: "https://tv-trtmuzik.medya.trt.com.tr/master.m3u8",
+        number: 14,
+        drmConfig: {
+            clearKeys: {
+                '07aa813bf2c147748046edd930f7736e': '3bd6688b8b44e96201e753224adfc8fb' 
+    },
+    trthaber: {
+        name: "TRT Haber",
+        url: "https://tv-trthaber.medya.trt.com.tr/master.m3u8",
+        number: 2,
+        drmConfig: {
+            clearKeys: {
+                '07aa813bf2c147748046edd930f7736e': '3bd6688b8b44e96201e753224adfc8fb' 
+    },
+    trtspor: {
+        name: "TRT Spor",
+        url: "https://tv-trtspor1.medya.trt.com.tr/master.m3u8",
+        number: 3,
+        drmConfig: {
+            clearKeys: {
+                '07aa813bf2c147748046edd930f7736e': '3bd6688b8b44e96201e753224adfc8fb' 
+    },
+    trtbelgesel: {
+        name: "TRT Belgesel",
+        url: "https://tv-trtbelgesel.medya.trt.com.tr/master.m3u8",
+        number: 4,
+        drmConfig: {
+            clearKeys: {
+                '07aa813bf2c147748046edd930f7736e': '3bd6688b8b44e96201e753224adfc8fb' 
+    },
+    trtcocuk: {
+        name: "TRT Çocuk",
+        url: "https://tv-trtcocuk.medya.trt.com.tr/master.m3u8",
+        number: 5,
+        drmConfig: {
+            clearKeys: {
+                '07aa813bf2c147748046edd930f7736e': '3bd6688b8b44e96201e753224adfc8fb' 
+    },
+    showtv: {
+        name: "Show TV",
+        url: "https://ciner-live.daioncdn.net/showtv/showtv.m3u8",
+        number: 6,
+        drmConfig: {
+            clearKeys: {
+                '07aa813bf2c147748046edd930f7736e': '3bd6688b8b44e96201e753224adfc8fb' 
+    },
+    startv: {
+        name: "Star TV",
+        url: "https://dogus-live.daioncdn.net/startv/startv.m3u8",
+        number: 7,
+        drmConfig: {
+            clearKeys: {
+                '07aa813bf2c147748046edd930f7736e': '3bd6688b8b44e96201e753224adfc8fb' 
+    },
+    tv8: {
+        name: "TV8",
+        url: "https://tv8-live.daioncdn.net/tv8/tv8.m3u8",
+        number: 8,
+        drmConfig: {
+            clearKeys: {
+                '07aa813bf2c147748046edd930f7736e': '3bd6688b8b44e96201e753224adfc8fb' 
+    },
+    beyaztv: {
+        name: "Beyaz TV",
+        url: "https://beyaztv-live.daioncdn.net/beyaztv/beyaztv.m3u8",
+        number: 9,
+        drmConfig: {
+            clearKeys: {
+                '07aa813bf2c147748046edd930f7736e': '3bd6688b8b44e96201e753224adfc8fb' 
+    },
+    ntv: {
+        name: "NTV",
+        url: "https://dogus-live.daioncdn.net/ntv/ntv.m3u8",
+        number: 10,
+        drmConfig: {
+            clearKeys: {
+                '07aa813bf2c147748046edd930f7736e': '3bd6688b8b44e96201e753224adfc8fb' 
+    },
+    trt2: {
+        name: "TRT 2",
+        url: "https://tv-trt2.medya.trt.com.tr/master.m3u8",
+        number: 11,
+        drmConfig: {
+            clearKeys: {
+                '07aa813bf2c147748046edd930f7736e': '3bd6688b8b44e96201e753224adfc8fb' 
+    },
+    numberone: {
+        name: "Number One",
+        url: "https://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/broadcast_5c9e17cd59e8b.smil/playlist.m3u8",
+        number: 13,
+        drmConfig: {
+            clearKeys: {
+                '07aa813bf2c147748046edd930f7736e': '3bd6688b8b44e96201e753224adfc8fb' 
+    },
+    haberturk: {
+        name: "Habertürk",
+        url: "https://ciner-live.daioncdn.net/haberturktv/haberturktv.m3u8",
+        number: 12,
+        drmConfig: {
+            clearKeys: {
+                '07aa813bf2c147748046edd930f7736e': '3bd6688b8b44e96201e753224adfc8fb' 
+    },
+    trt1: {
+        name: "TRT 1",
+        url: "https://tv-trt1.medya.trt.com.tr/master.m3u8",
+        number: 1,
+        drmConfig: {
+            clearKeys: {
+                '07aa813bf2c147748046edd930f7736e': '3bd6688b8b44e96201e753224adfc8fb'
+    },
+    trtmuzik: {
+        name: "TRT Müzik",
+        url: "https://tv-trtmuzik.medya.trt.com.tr/master.m3u8",
+        number: 14,
+        drmConfig: {
+            clearKeys: {
+                '07aa813bf2c147748046edd930f7736e': '3bd6688b8b44e96201e753224adfc8fb' 
+    },
+    trthaber: {
+        name: "TRT Haber",
+        url: "https://tv-trthaber.medya.trt.com.tr/master.m3u8",
+        number: 2,
+        drmConfig: {
+            clearKeys: {
+                '07aa813bf2c147748046edd930f7736e': '3bd6688b8b44e96201e753224adfc8fb' 
+    },
+    trtspor: {
+        name: "TRT Spor",
+        url: "https://tv-trtspor1.medya.trt.com.tr/master.m3u8",
+        number: 3,
+        drmConfig: {
+            clearKeys: {
+                '07aa813bf2c147748046edd930f7736e': '3bd6688b8b44e96201e753224adfc8fb' 
+    },
+    trtbelgesel: {
+        name: "TRT Belgesel",
+        url: "https://tv-trtbelgesel.medya.trt.com.tr/master.m3u8",
+        number: 4,
+        drmConfig: {
+            clearKeys: {
+                '07aa813bf2c147748046edd930f7736e': '3bd6688b8b44e96201e753224adfc8fb' 
+    },
+    trtcocuk: {
+        name: "TRT Çocuk",
+        url: "https://tv-trtcocuk.medya.trt.com.tr/master.m3u8",
+        number: 5,
+        drmConfig: {
+            clearKeys: {
+                '07aa813bf2c147748046edd930f7736e': '3bd6688b8b44e96201e753224adfc8fb' 
+    },
+    showtv: {
+        name: "Show TV",
+        url: "https://ciner-live.daioncdn.net/showtv/showtv.m3u8",
+        number: 6,
+        drmConfig: {
+            clearKeys: {
+                '07aa813bf2c147748046edd930f7736e': '3bd6688b8b44e96201e753224adfc8fb' 
+    },
+    startv: {
+        name: "Star TV",
+        url: "https://dogus-live.daioncdn.net/startv/startv.m3u8",
+        number: 7,
+        drmConfig: {
+            clearKeys: {
+                '07aa813bf2c147748046edd930f7736e': '3bd6688b8b44e96201e753224adfc8fb' 
+    },
+    tv8: {
+        name: "TV8",
+        url: "https://tv8-live.daioncdn.net/tv8/tv8.m3u8",
+        number: 8,
+        drmConfig: {
+            clearKeys: {
+                '07aa813bf2c147748046edd930f7736e': '3bd6688b8b44e96201e753224adfc8fb' 
+    },
+    beyaztv: {
+        name: "Beyaz TV",
+        url: "https://beyaztv-live.daioncdn.net/beyaztv/beyaztv.m3u8",
+        number: 9,
+        drmConfig: {
+            clearKeys: {
+                '07aa813bf2c147748046edd930f7736e': '3bd6688b8b44e96201e753224adfc8fb' 
+    },
+    ntv: {
+        name: "NTV",
+        url: "https://dogus-live.daioncdn.net/ntv/ntv.m3u8",
+        number: 10,
+        drmConfig: {
+            clearKeys: {
+                '07aa813bf2c147748046edd930f7736e': '3bd6688b8b44e96201e753224adfc8fb' 
+    },
+    trt2: {
+        name: "TRT 2",
+        url: "https://tv-trt2.medya.trt.com.tr/master.m3u8",
+        number: 11,
+        drmConfig: {
+            clearKeys: {
+                '07aa813bf2c147748046edd930f7736e': '3bd6688b8b44e96201e753224adfc8fb' 
+    },
+    numberone: {
+        name: "Number One",
+        url: "https://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/broadcast_5c9e17cd59e8b.smil/playlist.m3u8",
+        number: 13,
+        drmConfig: {
+            clearKeys: {
+                '07aa813bf2c147748046edd930f7736e': '3bd6688b8b44e96201e753224adfc8fb' 
+    },
+    haberturk: {
+        name: "Habertürk",
+        url: "https://ciner-live.daioncdn.net/haberturktv/haberturktv.m3u8",
+        number: 12,
+        drmConfig: {
+            clearKeys: {
+                '07aa813bf2c147748046edd930f7736e': '3bd6688b8b44e96201e753224adfc8fb' 
+    },
+    trt1: {
+        name: "TRT 1",
+        url: "https://tv-trt1.medya.trt.com.tr/master.m3u8",
+        number: 1,
+        drmConfig: {
+            clearKeys: {
+                '07aa813bf2c147748046edd930f7736e': '3bd6688b8b44e96201e753224adfc8fb'
+    },
+    trtmuzik: {
+        name: "TRT Müzik",
+        url: "https://tv-trtmuzik.medya.trt.com.tr/master.m3u8",
+        number: 14,
+        drmConfig: {
+            clearKeys: {
+                '07aa813bf2c147748046edd930f7736e': '3bd6688b8b44e96201e753224adfc8fb' 
+    },
+    trthaber: {
+        name: "TRT Haber",
+        url: "https://tv-trthaber.medya.trt.com.tr/master.m3u8",
+        number: 2,
+        drmConfig: {
+            clearKeys: {
+                '07aa813bf2c147748046edd930f7736e': '3bd6688b8b44e96201e753224adfc8fb' 
+    },
+    trtspor: {
+        name: "TRT Spor",
+        url: "https://tv-trtspor1.medya.trt.com.tr/master.m3u8",
+        number: 3,
+        drmConfig: {
+            clearKeys: {
+                '07aa813bf2c147748046edd930f7736e': '3bd6688b8b44e96201e753224adfc8fb' 
+    },
+    trtbelgesel: {
+        name: "TRT Belgesel",
+        url: "https://tv-trtbelgesel.medya.trt.com.tr/master.m3u8",
+        number: 4,
+        drmConfig: {
+            clearKeys: {
+                '07aa813bf2c147748046edd930f7736e': '3bd6688b8b44e96201e753224adfc8fb' 
+    },
+    trtcocuk: {
+        name: "TRT Çocuk",
+        url: "https://tv-trtcocuk.medya.trt.com.tr/master.m3u8",
+        number: 5,
+        drmConfig: {
+            clearKeys: {
+                '07aa813bf2c147748046edd930f7736e': '3bd6688b8b44e96201e753224adfc8fb' 
+    },
+    showtv: {
+        name: "Show TV",
+        url: "https://ciner-live.daioncdn.net/showtv/showtv.m3u8",
+        number: 6,
+        drmConfig: {
+            clearKeys: {
+                '07aa813bf2c147748046edd930f7736e': '3bd6688b8b44e96201e753224adfc8fb' 
+    },
+    startv: {
+        name: "Star TV",
+        url: "https://dogus-live.daioncdn.net/startv/startv.m3u8",
+        number: 7,
+        drmConfig: {
+            clearKeys: {
+                '07aa813bf2c147748046edd930f7736e': '3bd6688b8b44e96201e753224adfc8fb' 
+    },
+    tv8: {
+        name: "TV8",
+        url: "https://tv8-live.daioncdn.net/tv8/tv8.m3u8",
+        number: 8,
+        drmConfig: {
+            clearKeys: {
+                '07aa813bf2c147748046edd930f7736e': '3bd6688b8b44e96201e753224adfc8fb' 
+    },
+    beyaztv: {
+        name: "Beyaz TV",
+        url: "https://beyaztv-live.daioncdn.net/beyaztv/beyaztv.m3u8",
+        number: 9,
+        drmConfig: {
+            clearKeys: {
+                '07aa813bf2c147748046edd930f7736e': '3bd6688b8b44e96201e753224adfc8fb' 
+    },
+    ntv: {
+        name: "NTV",
+        url: "https://dogus-live.daioncdn.net/ntv/ntv.m3u8",
+        number: 10,
+        drmConfig: {
+            clearKeys: {
+                '07aa813bf2c147748046edd930f7736e': '3bd6688b8b44e96201e753224adfc8fb' 
+    },
+    trt2: {
+        name: "TRT 2",
+        url: "https://tv-trt2.medya.trt.com.tr/master.m3u8",
+        number: 11,
+        drmConfig: {
+            clearKeys: {
+                '07aa813bf2c147748046edd930f7736e': '3bd6688b8b44e96201e753224adfc8fb' 
+    },
+    numberone: {
+        name: "Number One",
+        url: "https://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/broadcast_5c9e17cd59e8b.smil/playlist.m3u8",
+        number: 13,
+        drmConfig: {
+            clearKeys: {
+                '07aa813bf2c147748046edd930f7736e': '3bd6688b8b44e96201e753224adfc8fb' 
+    },
+    haberturk: {
+        name: "Habertürk",
+        url: "https://ciner-live.daioncdn.net/haberturktv/haberturktv.m3u8",
+        number: 12,
+        drmConfig: {
+            clearKeys: {
+                '07aa813bf2c147748046edd930f7736e': '3bd6688b8b44e96201e753224adfc8fb' 
+    },
+    viva: {
+        name: "Viva",
+        url: "https://qp-pldt-live-grp-06-prod.akamaized.net/out/u/viva_sd.mpd",
+        number: 15,
+        drmConfig: {
+            clearKeys: {
+                '07aa813bf2c147748046edd930f7736e': '3bd6688b8b44e96201e753224adfc8fb'
+            }
         }
     }
 };
