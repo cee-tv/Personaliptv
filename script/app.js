@@ -1,666 +1,697 @@
 const channels = {
     tv5hd: {
-    number: 1,
-    name: "TV5 HD",
-    url: "https://qp-pldt-live-grp-02-prod.akamaized.net/out/u/tv5_hd.mpd",
-    drmConfig: {
-      clearKeys: {
+        number: 1,
+        name: "TV5 HD",
+        url: "https://qp-pldt-live-grp-02-prod.akamaized.net/out/u/tv5_hd.mpd",
+        drmConfig: {
+            clearKeys: {
                 '2615129ef2c846a9bbd43a641c7303ef': '07c7f996b1734ea288641a68e1cfdc4d'
-     },
-rptvhd:  {
-    number: 2,
-    name: "RPTV HD",
-    url: "https://qp-pldt-live-grp-03-prod.akamaized.net/out/u/cnn_rptv_prod_hd.mpd",
-    drmConfig: {
-      clearKeys: {
-                '1917f4caf2364e6d9b1507326a85ead6': 'a1340a251a5aa63a9b0ea5d9d7f67595'
-     },
-truefmtv:  {
-    number: 3,
-    name: "True FM TV",
-    url: "https://qp-pldt-live-grp-08-prod.akamaized.net/out/u/truefm_tv.mpd",
-    drmConfig: {
-      clearKeys: {
+            }
+        }
+    },
+    truefmtv: {
+        number: 2,
+        name: "True FM TV",
+        url: "https://qp-pldt-live-grp-08-prod.akamaized.net/out/u/truefm_tv.mpd",
+        drmConfig: {
+            clearKeys: {
                 '0559c95496d44fadb94105b9176c3579': '40d8bb2a46ffd03540e0c6210ece57ce'
-     },
-ptv4:  {
-    number: 4,
-    name: "PTV 4",
-    url: "https://qp-pldt-live-grp-02-prod.akamaized.net/out/u/cg_ptv4_sd.mpd",
-    drmConfig: {
-      clearKeys: {
+            }
+        }
+    },
+    ptv4: {
+        number: 3,
+        name: "PTV 4",
+        url: "https://qp-pldt-live-grp-02-prod.akamaized.net/out/u/cg_ptv4_sd.mpd",
+        drmConfig: {
+            clearKeys: {
                 '71a130a851b9484bb47141c8966fb4a3': 'ad1f003b4f0b31b75ea4593844435600'
-     },
-  ibc13: {
-    number: 5,
-    name: "IBC 13",
-    url: "https://qp-pldt-live-grp-07-prod.akamaized.net/out/u/ibc13_sd.mpd",
-    drmConfig: {
-      clearKeys: {
+            }
+        }
+    },
+    ibc13: {
+        number: 4,
+        name: "IBC 13",
+        url: "https://qp-pldt-live-grp-07-prod.akamaized.net/out/u/ibc13_sd.mpd",
+        drmConfig: {
+            clearKeys: {
                 '04e292bc99bd4ccba89e778651914254': 'ff0a62bdf8920ce453fe680330b563a5'
-     },
-a2z:  {
-    number: 6,
-    name: "A2Z",
-    url: "https://qp-pldt-live-grp-02-prod.akamaized.net/out/u/cg_a2z.mpd",
-    drmConfig: {
-      clearKeys: {
+            }
+        }
+    },
+    a2z: {
+        number: 5,
+        name: "A2Z",
+        url: "https://qp-pldt-live-grp-02-prod.akamaized.net/out/u/cg_a2z.mpd",
+        drmConfig: {
+            clearKeys: {
                 'f703e4c8ec9041eeb5028ab4248fa094': 'c22f2162e176eee6273a5d0b68d19530'
-     },
-oneph:  {
-    number: 7,
-    name: "One PH",
-    url: "https://qp-pldt-live-grp-04-prod.akamaized.net/out/u/oneph_sd.mpd",
-    drmConfig: {
-      clearKeys: {
-                '92834ab4a7e1499b90886c5d49220e46': 'a7108d9a6cfcc1b7939eb111daf09ab3'
-     },
-onenews:  {
-    number: 8,
-    name: "One News",
-    url: "https://qp-pldt-live-grp-04-prod.akamaized.net/out/u/onenews_hd1.mpd",
-    drmConfig: {
-      clearKeys: {
-                'd39eb201ae494a0b98583df4d110e8dd': '6797066880d344422abd3f5eda41f45f'
-     },
-buko:  {
-    number: 9,
-    name: "Buko",
-    url: "https://qp-pldt-live-grp-06-prod.akamaized.net/out/u/cg_buko_sd.mpd",
-    drmConfig: {
-      clearKeys: {
+            }
+        }
+    },
+    buko: {
+        number: 6,
+        name: "Buko",
+        url: "https://qp-pldt-live-grp-06-prod.akamaized.net/out/u/cg_buko_sd.mpd",
+        drmConfig: {
+            clearKeys: {
                 'd273c085f2ab4a248e7bfc375229007d': '7932354c3a84f7fc1b80efa6bcea0615'
-     },
-sarisari:  {
-    number: 10,
-    name: "Sari-Sari",
-    url: "https://qp-pldt-live-grp-06-prod.akamaized.net/out/u/cg_sari_sari_sd.mpd",
-    drmConfig: {
-      clearKeys: {
+            }
+        }
+    },
+    sarisari: {
+        number: 7,
+        name: "Sari-Sari",
+        url: "https://qp-pldt-live-grp-06-prod.akamaized.net/out/u/cg_sari_sari_sd.mpd",
+        drmConfig: {
+            clearKeys: {
                 '0a7ab3612f434335aa6e895016d8cd2d': 'b21654621230ae21714a5cab52daeb9d'
-     },
-pbarush:  {
-    number: 11,
-    name: "PBA Rush",
-    url: "https://qp-pldt-live-grp-01-prod.akamaized.net/out/u/cg_pbarush_hd1.mpd",
-    drmConfig: {
-      clearKeys: {
-                '76dc29dd87a244aeab9e8b7c5da1e5f3': '95b2f2ffd4e14073620506213b62ac82'
-     },
-onesportshd  {
-    number: 12,
-    name: "One Sports HD",
-    url: "https://qp-pldt-live-grp-07-prod.akamaized.net/out/u/cg_onesports_hd.mpd",
-    drmConfig: {
-      clearKeys: {
-                '53c3bf2eba574f639aa21f2d4409ff11': '3de28411cf08a64ea935b9578f6d0edd'
-     },
-onesports+  {
-    number: 13,
-    name: "One Sports+",
-    url: "https://qp-pldt-live-grp-03-prod.akamaized.net/out/u/cg_onesportsplus_hd1.mpd",
-    drmConfig: {
-      clearKeys: {
-                '322d06e9326f4753a7ec0908030c13d8': '1e3e0ca32d421fbfec86feced0efefda'
-     },
-uaapvarsitychannel: {
-    number: 14,
-    name: "UAAP Varsity Channel",
-    url: "https://qp-pldt-live-grp-04-prod.akamaized.net/out/u/cg_uaap_cplay_sd.mpd",
-    drmConfig: {
-      clearKeys: {
-                '95588338ee37423e99358a6d431324b9': '6e0f50a12f36599a55073868f814e81e'
-     },
-mptv:  {
-    number: 15,
-    name: "MPTV",
-    url: "https://qp-pldt-live-grp-09-prod.akamaized.net/out/u/cg_mptv.mpd",
-    drmConfig: {
-      clearKeys: {
-                '6aab8f40536f4ea98e7c97b8f3aa7d4e': '139aa5a55ade471faaddacc4f4de8807'
-     },
-nbaphilippines: {
-    number: 16,
-    name: "NBA TV Philippines",
-    url: "https://qp-pldt-live-grp-02-prod.akamaized.net/out/u/cgnl_nba.mpd",
-    drmConfig: {
-      clearKeys: {
+            }
+        }
+    },
+    nbaphilippines: {
+        number: 8,
+        name: "NBA TV Philippines",
+        url: "https://qp-pldt-live-grp-02-prod.akamaized.net/out/u/cgnl_nba.mpd",
+        drmConfig: {
+            clearKeys: {
                 'c5e51f41ceac48709d0bdcd9c13a4d88': '20b91609967e472c27040716ef6a8b9a'
-     },
-pbarush:  {
-    number: 17,
-    name: "PBA Rush",
-    url: "https://qp-pldt-live-grp-01-prod.akamaized.net/out/u/cg_pbarush_hd1.mpd",
-    drmConfig: {
-      clearKeys: {
+            }
+        }
+    },
+    pbarush2: {
+        number: 9,
+        name: "PBA Rush",
+        url: "https://qp-pldt-live-grp-01-prod.akamaized.net/out/u/cg_pbarush_hd1.mpd",
+        drmConfig: {
+            clearKeys: {
                 '76dc29dd87a244aeab9e8b7c5da1e5f3': '95b2f2ffd4e14073620506213b62ac82'
-     },
-onesportshd:  {
-    number: 18,
-    name: "One Sports HD",
-    url: "https://qp-pldt-live-grp-07-prod.akamaized.net/out/u/cg_onesports_hd.mpd",
-    drmConfig: {
-      clearKeys: {
+            }
+        }
+    },
+    onesportshd2: {
+        number: 10,
+        name: "One Sports HD",
+        url: "https://qp-pldt-live-grp-07-prod.akamaized.net/out/u/cg_onesports_hd.mpd",
+        drmConfig: {
+            clearKeys: {
                 '53c3bf2eba574f639aa21f2d4409ff11': '3de28411cf08a64ea935b9578f6d0edd'
-     },
-onesports+:  {
-    number: 19,
-    name: "One Sports+",
-    url: "https://qp-pldt-live-grp-03-prod.akamaized.net/out/u/cg_onesportsplus_hd1.mpd",
-    drmConfig: {
-      clearKeys: {
+            }
+        }
+    },
+    onesportsplus2: {
+        number: 11,
+        name: "One Sports+",
+        url: "https://qp-pldt-live-grp-03-prod.akamaized.net/out/u/cg_onesportsplus_hd1.mpd",
+        drmConfig: {
+            clearKeys: {
                 '322d06e9326f4753a7ec0908030c13d8': '1e3e0ca32d421fbfec86feced0efefda'
-     },
- uaapvarsitychannel: {
-    number: 20,
-    name: "UAAP Varsity Channel",
-    url: "https://qp-pldt-live-grp-04-prod.akamaized.net/out/u/cg_uaap_cplay_sd.mpd",
-    drmConfig: {
-      clearKeys: {
+            }
+        }
+    },
+    uaapvarsitychannel2: {
+        number: 12,
+        name: "UAAP Varsity Channel",
+        url: "https://qp-pldt-live-grp-04-prod.akamaized.net/out/u/cg_uaap_cplay_sd.mpd",
+        drmConfig: {
+            clearKeys: {
                 '95588338ee37423e99358a6d431324b9': '6e0f50a12f36599a55073868f814e81e'
-     },
-tapsports:  {
-    number: 21,
-    name: "Tap Sports",
-    url: "https://qp-pldt-live-grp-11-prod.akamaized.net/out/u/dr_tapsports.mpd",
-    drmConfig: {
-      clearKeys: {
-                'eabd2d95c89e42f2b0b0b40ce4179ea0': '0e7e35a07e2c12822316c0dc4873903f'
-     },
-mptv:  {
-    number: 22,
-    name: "MPTV",
-    url: "https://qp-pldt-live-grp-09-prod.akamaized.net/out/u/cg_mptv.mpd",
-    drmConfig: {
-      clearKeys: {
+            }
+        }
+    },
+    mptv2: {
+        number: 13,
+        name: "MPTV",
+        url: "https://qp-pldt-live-grp-09-prod.akamaized.net/out/u/cg_mptv.mpd",
+        drmConfig: {
+            clearKeys: {
                 '6aab8f40536f4ea98e7c97b8f3aa7d4e': '139aa5a55ade471faaddacc4f4de8807'
-     },
-oneph:  {
-    number: 23,
-    name: "One PH",
-    url: "https://qp-pldt-live-grp-04-prod.akamaized.net/out/u/oneph_sd.mpd",
-    drmConfig: {
-      clearKeys: {
+            }
+        }
+    },
+    oneph2: {
+        number: 14,
+        name: "One PH",
+        url: "https://qp-pldt-live-grp-04-prod.akamaized.net/out/u/oneph_sd.mpd",
+        drmConfig: {
+            clearKeys: {
                 '92834ab4a7e1499b90886c5d49220e46': 'a7108d9a6cfcc1b7939eb111daf09ab3'
-     },
-onenews:  {
-    number: 24,
-    name: "One News",
-    url: "https://qp-pldt-live-grp-04-prod.akamaized.net/out/u/onenews_hd1.mpd",
-    drmConfig: {
-      clearKeys: {
+            }
+        }
+    },
+    onenews2: {
+        number: 15,
+        name: "One News",
+        url: "https://qp-pldt-live-grp-04-prod.akamaized.net/out/u/onenews_hd1.mpd",
+        drmConfig: {
+            clearKeys: {
                 'd39eb201ae494a0b98583df4d110e8dd': '6797066880d344422abd3f5eda41f45f'
-     },
-rptvhd:  {
-    number: 25,
-    name: "RPTV HD",
-    url: "https://qp-pldt-live-grp-03-prod.akamaized.net/out/u/cnn_rptv_prod_hd.mpd",
-    drmConfig: {
-      clearKeys: {
+            }
+        }
+    },
+    rptvhd2: {
+        number: 16,
+        name: "RPTV HD",
+        url: "https://qp-pldt-live-grp-03-prod.akamaized.net/out/u/cnn_rptv_prod_hd.mpd",
+        drmConfig: {
+            clearKeys: {
                 '1917f4caf2364e6d9b1507326a85ead6': 'a1340a251a5aa63a9b0ea5d9d7f67595'
-     },
-bilyonaryonewschannel:  {
-    number: 26,
-    name: "Bilyonaryo News Channel",
-    url: "https://qp-pldt-live-grp-05-prod.akamaized.net/out/u/bilyonaryoch.mpd",
-    drmConfig: {
-      clearKeys: {
+            }
+        }
+    },
+    bilyonaryonewschannel: {
+        number: 17,
+        name: "Bilyonaryo News Channel",
+        url: "https://qp-pldt-live-grp-05-prod.akamaized.net/out/u/bilyonaryoch.mpd",
+        drmConfig: {
+            clearKeys: {
                 '227ffaf09bec4a889e0e0988704d52a2': 'b2d0dce5c486891997c1c92ddaca2cd2'
-     },
-aljazeera:  {
-    number: 27,
-    name: "Al Jazeera",
-    url: "https://qp-pldt-live-grp-12-prod.akamaized.net/out/u/dr_aljazeera.mpd",
-    drmConfig: {
-      clearKeys: {
+            }
+        }
+    },
+    aljazeera: {
+        number: 18,
+        name: "Al Jazeera",
+        url: "https://qp-pldt-live-grp-12-prod.akamaized.net/out/u/dr_aljazeera.mpd",
+        drmConfig: {
+            clearKeys: {
                 '7f3d900a04d84492b31fe9f79ac614e3': 'd33ff14f50beac42969385583294b8f2'
-     },
- bloomberg: {
-    number: 28,
-    name: "Bloomberg",
-    url: "https://qp-pldt-live-grp-09-prod.akamaized.net/out/u/bloomberg_sd.mpd",
-    drmConfig: {
-      clearKeys: {
+            }
+        }
+    },
+    bloomberg: {
+        number: 19,
+        name: "Bloomberg",
+        url: "https://qp-pldt-live-grp-09-prod.akamaized.net/out/u/bloomberg_sd.mpd",
+        drmConfig: {
+            clearKeys: {
                 'ef7d9dcfb99b406cb79fb9f675cba426': 'b24094f6ca136af25600e44df5987af4'
-     },
-cna:  {
-    number: 29,
-    name: "CNA",
-    url: "https://qp-pldt-live-grp-13-prod.akamaized.net/out/u/dr_channelnewsasia.mpd",
-    drmConfig: {
-      clearKeys: {
+            }
+        }
+    },
+    cna: {
+        number: 20,
+        name: "CNA",
+        url: "https://qp-pldt-live-grp-13-prod.akamaized.net/out/u/dr_channelnewsasia.mpd",
+        drmConfig: {
+            clearKeys: {
                 'b259df9987364dd3b778aa5d42cb9acd': '753e3dba96ab467e468269e7e33fb813'
-     },
-cnnhd:  {
-    number: 30,
-    name: "CNN HD",
-    url: "https://qp-pldt-live-grp-12-prod.akamaized.net/out/u/dr_cnnhd.mpd",
-    drmConfig: {
-      clearKeys: {
+            }
+        }
+    },
+    cnnhd: {
+        number: 21,
+        name: "CNN HD",
+        url: "https://qp-pldt-live-grp-12-prod.akamaized.net/out/u/dr_cnnhd.mpd",
+        drmConfig: {
+            clearKeys: {
                 '900c43f0e02742dd854148b7a75abbec': 'da315cca7f2902b4de23199718ed7e90'
-     },
-cctv4:  {
-    number: 31,
-    name: "CCTV 4",
-    url: "https://qp-pldt-live-grp-12-prod.akamaized.net/out/u/dr_cctv4.mpd",
-    drmConfig: {
-      clearKeys: {
+            }
+        }
+    },
+    cctv4: {
+        number: 22,
+        name: "CCTV 4",
+        url: "https://qp-pldt-live-grp-12-prod.akamaized.net/out/u/dr_cctv4.mpd",
+        drmConfig: {
+            clearKeys: {
                 'b83566836c0d4216b7107bd7b8399366': '32d50635bfd05fbf8189a0e3f6c8db09'
-     },
-france24:  {
-    number: 32,
-    name: "France 24",
-    url: "https://qp-pldt-live-grp-11-prod.akamaized.net/out/u/dr_france24.mpd",
-    drmConfig: {
-      clearKeys: {
+            }
+        }
+    },
+    france24: {
+        number: 23,
+        name: "France 24",
+        url: "https://qp-pldt-live-grp-11-prod.akamaized.net/out/u/dr_france24.mpd",
+        drmConfig: {
+            clearKeys: {
                 '257f9fdeb39d41bdb226c2ae1fbdaeb6': 'e80ead0f4f9d6038ab34f332713ceaa5'
-     },
-hbohd:  {
-    number: 33,
-    name: "HBO HD",
-    url: "https://qp-pldt-live-grp-03-prod.akamaized.net/out/u/cg_hbohd.mpd",
-    drmConfig: {
-      clearKeys: {
+            }
+        }
+    },
+    hbohd: {
+        number: 24,
+        name: "HBO HD",
+        url: "https://qp-pldt-live-grp-03-prod.akamaized.net/out/u/cg_hbohd.mpd",
+        drmConfig: {
+            clearKeys: {
                 'd47ebabf7a21430b83a8c4b82d9ef6b1': '54c213b2b5f885f1e0290ee4131d425b'
-     },
-hbosignaturehd:  {
-    number: 34,
-    name: "HBO Signature HD",
-    url: "https://qp-pldt-live-grp-01-prod.akamaized.net/out/u/cg_hbosign.mpd",
-    drmConfig: {
-      clearKeys: {
+            }
+        }
+    },
+    hbosignaturehd: {
+        number: 25,
+        name: "HBO Signature HD",
+        url: "https://qp-pldt-live-grp-01-prod.akamaized.net/out/u/cg_hbosign.mpd",
+        drmConfig: {
+            clearKeys: {
                 'a06ca6c275744151895762e0346380f5': '559da1b63eec77b5a942018f14d3f56f'
-     },
-hbohitshd:  {
-    number: 35,
-    name: "HBO Hits HD",
-    url: "https://qp-pldt-live-grp-09-prod.akamaized.net/out/u/cg_hbohits.mpd",
-    drmConfig: {
-      clearKeys: {
+            }
+        }
+    },
+    hbohitshd: {
+        number: 26,
+        name: "HBO Hits HD",
+        url: "https://qp-pldt-live-grp-09-prod.akamaized.net/out/u/cg_hbohits.mpd",
+        drmConfig: {
+            clearKeys: {
                 'b04ae8017b5b4601a5a0c9060f6d5b7d': 'a8795f3bdb8a4778b7e888ee484cc7a1'
-     },
-hbofamilyhd: {
-    number: 36,
-    name: "HBO Family HD",
-    url: "https://qp-pldt-live-grp-03-prod.akamaized.net/out/u/cg_hbofam.mpd",
-    drmConfig: {
-      clearKeys: {
+            }
+        }
+    },
+    hbofamilyhd: {
+        number: 27,
+        name: "HBO Family HD",
+        url: "https://qp-pldt-live-grp-03-prod.akamaized.net/out/u/cg_hbofam.mpd",
+        drmConfig: {
+            clearKeys: {
                 '872910c843294319800d85f9a0940607': 'f79fd895b79c590708cf5e8b5c6263be'
-     },
- cinemaxhd:  {
-    number: 37,
-    name: "Cinemax HD",
-    url: "https://qp-pldt-live-grp-01-prod.akamaized.net/out/u/cg_cinemax.mpd",
-    drmConfig: {
-      clearKeys: {
+            }
+        }
+    },
+    cinemaxhd: {
+        number: 28,
+        name: "Cinemax HD",
+        url: "https://qp-pldt-live-grp-01-prod.akamaized.net/out/u/cg_cinemax.mpd",
+        drmConfig: {
+            clearKeys: {
                 'b207c44332844523a3a3b0469e5652d7': 'fe71aea346db08f8c6fbf0592209f955'
-     },
-hitsmovies:  {
-    number: 38,
-    name: "HITS Movies",
-    url: "https://qp-pldt-live-grp-12-prod.akamaized.net/out/u/dr_hitsmovies.mpd",
-    drmConfig: {
-      clearKeys: {
+            }
+        }
+    },
+    hitsmovies: {
+        number: 29,
+        name: "HITS Movies",
+        url: "https://qp-pldt-live-grp-12-prod.akamaized.net/out/u/dr_hitsmovies.mpd",
+        drmConfig: {
+            clearKeys: {
                 'f56b57b32d7e4b2cb21748c0b56761a7': '3df06a89aa01b32655a77d93e09e266f'
-     },
-tvnmoviespinoy:  {
-    number: 39,
-    name: "tvN Movies Pinoy",
-    url: "https://qp-pldt-live-grp-07-prod.akamaized.net/out/u/cg_tvnmovie.mpd",
-    drmConfig: {
-      clearKeys: {
+            }
+        }
+    },
+    tvnmoviespinoy: {
+        number: 30,
+        name: "tvN Movies Pinoy",
+        url: "https://qp-pldt-live-grp-07-prod.akamaized.net/out/u/cg_tvnmovie.mpd",
+        drmConfig: {
+            clearKeys: {
                 '2e53f8d8a5e94bca8f9a1e16ce67df33': '3471b2464b5c7b033a03bb8307d9fa35'
-     },
-animax:  {
-    number: 40,
-    name: "Animax",
-    url: "https://qp-pldt-live-grp-07-prod.akamaized.net/out/u/cg_animax_sd.mpd",
-    drmConfig: {
-      clearKeys: {
+            }
+        }
+    },
+    animax: {
+        number: 31,
+        name: "Animax",
+        url: "https://qp-pldt-live-grp-07-prod.akamaized.net/out/u/cg_animax_sd.mpd",
+        drmConfig: {
+            clearKeys: {
                 '92032b0e41a543fb9830751273b8debd': '03f8b65e2af785b10d6634735dbe6c11'
-     },
-dreamworkshd: {
-    number: 41,
-    name: "DreamWorks HD",
-    url: "https://qp-pldt-live-grp-02-prod.akamaized.net/out/u/cg_dreamworks_hd1.mpd",
-    drmConfig: {
-      clearKeys: {
+            }
+        }
+    },
+    dreamworkshd: {
+        number: 32,
+        name: "DreamWorks HD",
+        url: "https://qp-pldt-live-grp-02-prod.akamaized.net/out/u/cg_dreamworks_hd1.mpd",
+        drmConfig: {
+            clearKeys: {
                 '4ab9645a2a0a47edbd65e8479c2b9669': '8cb209f1828431ce9b50b593d1f44079'
-     },
-dreamworkstagalized:  {
-    number: 42,
-    name: "DreamWorks (Tagalized)",
-    url: "https://qp-pldt-live-grp-07-prod.akamaized.net/out/u/cg_dreamworktag.mpd",
-    drmConfig: {
-      clearKeys: {
+            }
+        }
+    },
+    dreamworkstagalized: {
+        number: 33,
+        name: "DreamWorks (Tagalized)",
+        url: "https://qp-pldt-live-grp-07-prod.akamaized.net/out/u/cg_dreamworktag.mpd",
+        drmConfig: {
+            clearKeys: {
                 '564b3b1c781043c19242c66e348699c5': 'd3ad27d7fe1f14fb1a2cd5688549fbab'
-     },
-moonbugkids:  {
-    number: 43,
-    name: "Moonbug Kids",
-    url: "https://qp-pldt-live-grp-06-prod.akamaized.net/out/u/cg_moonbug_knumbers_sd.mpd",
-    drmConfig: {
-      clearKeys: {
+            }
+        }
+    },
+    moonbugkids: {
+        number: 34,
+        name: "Moonbug Kids",
+        url: "https://qp-pldt-live-grp-06-prod.akamaized.net/out/u/cg_moonbug_knumbers_sd.mpd",
+        drmConfig: {
+            clearKeys: {
                 '0bf00921bec94a65a124fba1ef52b1cd': '0f1488487cbe05e2badc3db53ae0f29f'
-     },
-nickelodeonsd:  {
-    number: 44,
-    name: "Nickelodeon SD",
-    url: "https://linearjitp-playback.astro.com.my/dash-wv/linear/2511/default_ott.mpd",
-    drmConfig: {
-      clearKeys: {
+            }
+        }
+    },
+    nickelodeonsd: {
+        number: 35,
+        name: "Nickelodeon SD",
+        url: "https://linearjitp-playback.astro.com.my/dash-wv/linear/2511/default_ott.mpd",
+        drmConfig: {
+            clearKeys: {
                 'bda5f7bbc1e44096f779a0619fe9881f': 'd8520e96a1283ab6e5be538474bfa810'
-     },
-knowledgechannel: {
-    number: 45,
-    name: "Knowledge Channel",
-    url: "https://qp-pldt-live-grp-13-prod.akamaized.net/out/u/dr_knowledgechannel.mpd",
-    drmConfig: {
-      clearKeys: {
+            }
+        }
+    },
+    knowledgechannel: {
+        number: 36,
+        name: "Knowledge Channel",
+        url: "https://qp-pldt-live-grp-13-prod.akamaized.net/out/u/dr_knowledgechannel.mpd",
+        drmConfig: {
+            clearKeys: {
                 '0f856fa0412b11edb8780242ac120002': '783374273ef97ad3bc992c1d63e091e7'
-     },
-depedtv:  {
-    number: 46,
-    name: "DepEd TV",
-    url: "https://qp-pldt-live-grp-07-prod.akamaized.net/out/u/depedch_sd.mpd",
-    drmConfig: {
-      clearKeys: {
+            }
+        }
+    },
+    depedtv: {
+        number: 37,
+        name: "DepEd TV",
+        url: "https://qp-pldt-live-grp-07-prod.akamaized.net/out/u/depedch_sd.mpd",
+        drmConfig: {
+            clearKeys: {
                 '0f853706412b11edb8780242ac120002': '2157d6529d80a760f60a8b5350dbc4df'
-     },
- warnertvhd: {
-    number: 47,
-    name: "Warner TV HD",
-    url: "https://qp-pldt-live-grp-11-prod.akamaized.net/out/u/dr_warnertvhd.mpd",
-    drmConfig: {
-      clearKeys: {
+            }
+        }
+    },
+    warnertvhd: {
+        number: 38,
+        name: "Warner TV HD",
+        url: "https://qp-pldt-live-grp-11-prod.akamaized.net/out/u/dr_warnertvhd.mpd",
+        drmConfig: {
+            clearKeys: {
                 '4503cf86bca3494ab95a77ed913619a0': 'afc9c8f627fb3fb255dee8e3b0fe1d71'
-     },
-tvnpremiumhd:  {
-    number: 48,
-    name: "tvN Premium HD",
-    url: "https://qp-pldt-live-grp-09-prod.akamaized.net/out/u/cg_tvnpre.mpd",
-    drmConfig: {
-      clearKeys: {
+            }
+        }
+    },
+    tvnpremiumhd: {
+        number: 39,
+        name: "tvN Premium HD",
+        url: "https://qp-pldt-live-grp-09-prod.akamaized.net/out/u/cg_tvnpre.mpd",
+        drmConfig: {
+            clearKeys: {
                 'e1bde543e8a140b38d3f84ace746553e': 'b712c4ec307300043333a6899a402c10'
-     },
-kbsworldsd:  {
-    number: 49,
-    name: "KBS World SD",
-    url: "https://qp-pldt-live-grp-12-prod.akamaized.net/out/u/dr_kbsworld.mpd",
-    drmConfig: {
-      clearKeys: {
+            }
+        }
+    },
+    kbsworldsd: {
+        number: 40,
+        name: "KBS World SD",
+        url: "https://qp-pldt-live-grp-12-prod.akamaized.net/out/u/dr_kbsworld.mpd",
+        drmConfig: {
+            clearKeys: {
                 '22ff2347107e4871aa423bea9c2bd363': 'c6e7ba2f48b3a3b8269e8bc360e60404'
-     },
-axn:  {
-    number: 50,
-    name: "AXN",
-    url: "https://qp-pldt-live-grp-06-prod.akamaized.net/out/u/cg_axn_sd.mpd",
-    drmConfig: {
-      clearKeys: {
+            }
+        }
+    },
+    axn: {
+        number: 41,
+        name: "AXN",
+        url: "https://qp-pldt-live-grp-06-prod.akamaized.net/out/u/cg_axn_sd.mpd",
+        drmConfig: {
+            clearKeys: {
                 'fd5d928f5d974ca4983f6e9295dfe410': '3aaa001ddc142fedbb9d5557be43792f'
-     },
-hitshd:  {
-    number: 51,
-    name: "Hits HD",
-    url: "https://qp-pldt-live-grp-04-prod.akamaized.net/out/u/hits_hd1.mpd",
-    drmConfig: {
-      clearKeys: {
+            }
+        }
+    },
+    hitshd: {
+        number: 42,
+        name: "Hits HD",
+        url: "https://qp-pldt-live-grp-04-prod.akamaized.net/out/u/hits_hd1.mpd",
+        drmConfig: {
+            clearKeys: {
                 'dac605bc197e442c93f4f08595a95100': '975e27ffc1b7949721ee3ccb4b7fd3e5'
-     },
-hitsnow:  {
-    number: 52,
-    name: "HITS Now",
-    url: "https://qp-pldt-live-grp-09-prod.akamaized.net/out/u/cg_hitsnow.mpd",
-    drmConfig: {
-      clearKeys: {
+            }
+        }
+    },
+    hitsnow: {
+        number: 43,
+        name: "HITS Now",
+        url: "https://qp-pldt-live-grp-09-prod.akamaized.net/out/u/cg_hitsnow.mpd",
+        drmConfig: {
+            clearKeys: {
                 '14439a1b7afc4527bb0ebc51cf11cbc1': '92b0287c7042f271b266cc11ab7541f1'
-     },
-lifetimesd:  {
-    number: 53,
-    name: "Lifetime SD",
-    url: "https://qp-pldt-live-grp-11-prod.akamaized.net/out/u/dr_lifetime.mpd",
-    drmConfig: {
-      clearKeys: {
+            }
+        }
+    },
+    lifetimesd: {
+        number: 44,
+        name: "Lifetime SD",
+        url: "https://qp-pldt-live-grp-11-prod.akamaized.net/out/u/dr_lifetime.mpd",
+        drmConfig: {
+            clearKeys: {
                 'cf861d26e7834166807c324d57df5119': '64a81e30f6e5b7547e3516bbf8c647d0'
-     },
-tv5hd:  {
-    number: 54,
-    name: "TV5 HD",
-    url: "https://qp-pldt-live-grp-02-prod.akamaized.net/out/u/tv5_hd.mpd",
-    drmConfig: {
-      clearKeys: {
-                '2615129ef2c846a9bbd43a641c7303ef': '07c7f996b1734ea288641a68e1cfdc4d'
-     },
-a2z:  {
-    number: 55,
-    name: "A2Z",
-    url: "https://qp-pldt-live-grp-02-prod.akamaized.net/out/u/cg_a2z.mpd",
-    drmConfig: {
-      clearKeys: {
-                'f703e4c8ec9041eeb5028ab4248fa094': 'c22f2162e176eee6273a5d0b68d19530'
-     },
- oneph: {
-    number: 56,
-    name: "One PH",
-    url: "https://qp-pldt-live-grp-04-prod.akamaized.net/out/u/oneph_sd.mpd",
-    drmConfig: {
-      clearKeys: {
-                '92834ab4a7e1499b90886c5d49220e46': 'a7108d9a6cfcc1b7939eb111daf09ab3'
-     },  
-vivacinema:  {
-    number: 57,
-    name: "Viva Cinema",
-    url: "https://qp-pldt-live-grp-06-prod.akamaized.net/out/u/viva_sd.mpd",
-    drmConfig: {
-      clearKeys: {
+            }
+        }
+    },
+    vivacinema: {
+        number: 45,
+        name: "Viva Cinema",
+        url: "https://qp-pldt-live-grp-06-prod.akamaized.net/out/u/viva_sd.mpd",
+        drmConfig: {
+            clearKeys: {
                 '07aa813bf2c147748046edd930f7736e': '3bd6688b8b44e96201e753224adfc8fb'
-     },
-pinoyboxoffice:  {
-    number: 58,
-    name: "Pinoy Box Office",
-    url: "https://qp-pldt-live-grp-04-prod.akamaized.net/out/u/pbo_sd.mpd",
-    drmConfig: {
-      clearKeys: {
+            }
+        }
+    },
+    pinoyboxoffice: {
+        number: 46,
+        name: "Pinoy Box Office",
+        url: "https://qp-pldt-live-grp-04-prod.akamaized.net/out/u/pbo_sd.mpd",
+        drmConfig: {
+            clearKeys: {
                 'dcbdaaa6662d4188bdf97f9f0ca5e830': '31e752b441bd2972f2b98a4b1bc1c7a1'
-     },
-premiersportshd:  {
-    number: 59,
-    name: "Premier Sports HD",
-    url: "https://qp-pldt-live-grp-03-prod.akamaized.net/out/u/cg_premiersports_hd1.mpd",
-    drmConfig: {
-      clearKeys: {
+            }
+        }
+    },
+    premiersportshd: {
+        number: 47,
+        name: "Premier Sports HD",
+        url: "https://qp-pldt-live-grp-03-prod.akamaized.net/out/u/cg_premiersports_hd1.mpd",
+        drmConfig: {
+            clearKeys: {
                 'fc19c98cb9504a0fb78b22fea0a4b814': 'ea683112a96d4ae6c32d4ea13923e8c7'
-     },
-nickjr:  {
-    number: 60,
-    name: "Nick Jr",
-    url: "https://linearjitp-playback.astro.com.my/dash-wv/linear/9982/default_ott.mpd",
-    drmConfig: {
-      clearKeys: {
+            }
+        }
+    },
+    nickjr: {
+        number: 48,
+        name: "Nick Jr",
+        url: "https://linearjitp-playback.astro.com.my/dash-wv/linear/9982/default_ott.mpd",
+        drmConfig: {
+            clearKeys: {
                 'a098896d2b11c5f3906a993c3ba5c610': 'f3f842c54cc96cbbd0bcb96a4cb8a813'
-     },
-cartoonnetworkhd:  {
-    number: 61,
-    name: "Cartoon Network HD",
-    url: "https://qp-pldt-live-grp-12-prod.akamaized.net/out/u/dr_cartoonnetworkhd.mpd",
-    drmConfig: {
-      clearKeys: {
+            }
+        }
+    },
+    cartoonnetworkhd: {
+        number: 49,
+        name: "Cartoon Network HD",
+        url: "https://qp-pldt-live-grp-12-prod.akamaized.net/out/u/dr_cartoonnetworkhd.mpd",
+        drmConfig: {
+            clearKeys: {
                 'a2d1f552ff9541558b3296b5a932136b': 'cdd48fa884dc0c3a3f85aeebca13d444'
-     },
-tagalizedmoviechannel:  {
-    number: 62,
-    name: "Tagalized Movie Channel",
-    url: "https://qp-pldt-live-grp-07-prod.akamaized.net/out/u/cg_tagalogmovie.mpd",
-    drmConfig: {
-      clearKeys: {
+            }
+        }
+    },
+    tagalizedmoviechannel: {
+        number: 50,
+        name: "Tagalized Movie Channel",
+        url: "https://qp-pldt-live-grp-07-prod.akamaized.net/out/u/cg_tagalogmovie.mpd",
+        drmConfig: {
+            clearKeys: {
                 '96701d297d1241e492d41c397631d857': 'ca2931211c1a261f082a3a2c4fd9f91b'
-     },
-lotusmacau:  {
-    number: 63,
-    name: "Lotus Macau",
-    url: "https://qp-pldt-live-grp-07-prod.akamaized.net/out/u/lotusmacau_prd.mpd",
-    drmConfig: {
-      clearKeys: {
+            }
+        }
+    },
+    lotusmacau: {
+        number: 51,
+        name: "Lotus Macau",
+        url: "https://qp-pldt-live-grp-07-prod.akamaized.net/out/u/lotusmacau_prd.mpd",
+        drmConfig: {
+            clearKeys: {
                 '60dc692e64ea443a8fb5ac186c865a9b': '01bdbe22d59b2a4504b53adc2f606cc1'
-     },
-rockentertainment: {
-    number: 64,
-    name: "Rock Entertainment",
-    url: "https://qp-pldt-live-grp-13-prod.akamaized.net/out/u/dr_rockentertainment.mpd",
-    drmConfig: {
-      clearKeys: {
+            }
+        }
+    },
+    rockentertainment: {
+        number: 52,
+        name: "Rock Entertainment",
+        url: "https://qp-pldt-live-grp-13-prod.akamaized.net/out/u/dr_rockentertainment.mpd",
+        drmConfig: {
+            clearKeys: {
                 'e4ee0cf8ca9746f99af402ca6eed8dc7': 'be2a096403346bc1d0bb0f812822bb62'
-     },
-asianfoodnetwork:  {
-    number: 65,
-    name: "Asian Food Network",
-    url: "https://qp-pldt-live-grp-07-prod.akamaized.net/out/u/asianfoodnetwork_sd.mpd",
-    drmConfig: {
-      clearKeys: {
+            }
+        }
+    },
+    asianfoodnetwork: {
+        number: 53,
+        name: "Asian Food Network",
+        url: "https://qp-pldt-live-grp-07-prod.akamaized.net/out/u/asianfoodnetwork_sd.mpd",
+        drmConfig: {
+            clearKeys: {
                 '1619db30b9ed42019abb760a0a3b5e7f': '5921e47fb290ae263291b851c0b4b6e4'
-     },
- bbcnews: {
-    number: 66,
-    name: "BBC News",
-    url: "https://d2vnbkvjbims7j.cloudfront.net/containerA/LTN/playlist.m3u8",
-    "type": "hls",
-    "provnumberer": "cignalplay"
-  },
-premiersports2:  {
-    number: 67,
-    name: "Premier Sports 2",
-    url: "https://qp-pldt-live-grp-03-prod.akamaized.net/out/u/cg_premiersports_hd1.mpd",
-    drmConfig: {
-      clearKeys: {
+            }
+        }
+    },
+    bbcnews: {
+        number: 54,
+        name: "BBC News",
+        url: "https://d2vnbkvjbims7j.cloudfront.net/containerA/LTN/playlist.m3u8",
+        type: "hls"
+    },
+    premiersports2: {
+        number: 55,
+        name: "Premier Sports 2",
+        url: "https://qp-pldt-live-grp-03-prod.akamaized.net/out/u/cg_premiersports_hd1.mpd",
+        drmConfig: {
+            clearKeys: {
                 'fc19c98cb9504a0fb78b22fea0a4b814': 'ea683112a96d4ae6c32d4ea13923e8c7'
-     },
- kixhd:   {
-        number: 68,
+            }
+        }
+    },
+    kixhd: {
+        number: 56,
         name: "Kix HD",
         url: "https://qp-pldt-live-grp-06-prod.akamaized.net/out/u/kix_hd1.mpd",
         drmConfig: {
-      clearKeys: {
+            clearKeys: {
                 'a8d5712967cd495ca80fdc425bc61d6b': 'f248c29525ed4c40cc39baeee9634735'
-            } ,
- crimeinvestigation: {
-        number: 69,
+            }
+        }
+    },
+    crimeinvestigation: {
+        number: 57,
         name: "Crime & Investigation",
         url: "https://qp-pldt-live-grp-12-prod.akamaized.net/out/u/dr_crime_invest.mpd",
         drmConfig: {
-      clearKeys: {
+            clearKeys: {
                 '21e2843b561c4248b8ea487986a16d33': 'db6bb638ccdfc1ad1a3e98d728486801'
-            } ,
-   bbcearthhd: {
-        number: 70,
+            }
+        }
+    },
+    bbcearthhd: {
+        number: 58,
         name: "BBC Earth HD",
         url: "https://qp-pldt-live-grp-03-prod.akamaized.net/out/u/cg_bbcearth_hd1.mpd",
         drmConfig: {
-      clearKeys: {
+            clearKeys: {
                 '34ce95b60c424e169619816c5181aded': '0e2a2117d705613542618f58bf26fc8e'
-            } ,
+            }
+        }
+    },
     discoverychannelsd: {
-        number: 71,
+        number: 59,
         name: "Discovery Channel SD",
         url: "https://qp-pldt-live-grp-13-prod.akamaized.net/out/u/dr_discovery.mpd",
         drmConfig: {
-      clearKeys: {
+            clearKeys: {
                 'd9ac48f5131641a789328257e778ad3a': 'b6e67c37239901980c6e37e0607ceee6'
-            } ,
-   animalplanet: {
-        number: 72,
+            }
+        }
+    },
+    animalplanet: {
+        number: 60,
         name: "Animal Planet",
         url: "https://qp-pldt-live-grp-02-prod.akamaized.net/out/u/cg_animal_planet_sd.mpd",
         drmConfig: {
-      clearKeys: {
+            clearKeys: {
                 '436b69f987924fcbbc06d40a69c2799a': 'c63d5b0d7e52335b61aeba4f6537d54d'
-            } ,
-  travelchannelsd:  {
-        number: 73,
+            }
+        }
+    },
+    travelchannelsd: {
+        number: 61,
         name: "Travel Channel SD",
         url: "https://qp-pldt-live-grp-08-prod.akamaized.net/out/u/travel_channel_sd.mpd",
         drmConfig: {
-      clearKeys: {
+            clearKeys: {
                 'f3047fc13d454dacb6db4207ee79d3d3': 'bdbd38748f51fc26932e96c9a2020839'
-            } ,
- tapmovieshd:   {
-        number: 74,
+            }
+        }
+    },
+    tapmovieshd: {
+        number: 62,
         name: "TAP Movies HD",
         url: "https://qp-pldt-live-grp-06-prod.akamaized.net/out/u/cg_tapmovies_hd1.mpd",
         drmConfig: {
-      clearKeys: {
+            clearKeys: {
                 '71cbdf02b595468bb77398222e1ade09': 'c3f2aa420b8908ab8761571c01899460'
-            } ,
- tapactionflixhd:   {
-        number: 75,
+            }
+        }
+    },
+    tapactionflixhd: {
+        number: 63,
         name: "Tap Action Flix HD",
         url: "https://qp-pldt-live-grp-06-prod.akamaized.net/out/u/cg_tapactionflix_hd1.mpd",
         drmConfig: {
-      clearKeys: {
+            clearKeys: {
                 'bee1066160c0424696d9bf99ca0645e3': 'f5b72bf3b89b9848de5616f37de040b7'
-            } ,
-taptv:    {
-        number: 76,
+            }
+        }
+    },
+    taptv: {
+        number: 64,
         name: "Tap TV",
         url: "https://qp-pldt-live-grp-06-prod.akamaized.net/out/u/cg_taptv_sd.mpd",
         drmConfig: {
-      clearKeys: {
+            clearKeys: {
                 'f6804251e90b4966889b7df94fdc621e': '55c3c014f2bd12d6bd62349658f24566'
-            } ,
-thrillsd:    {
-        number: 77,
+            }
+        }
+    },
+    thrillsd: {
+        number: 65,
         name: "Thrill SD",
         url: "https://qp-pldt-live-grp-06-prod.akamaized.net/out/u/cg_thrill_sd.mpd",
         drmConfig: {
-      clearKeys: {
+            clearKeys: {
                 '928114ffb2394d14b5585258f70ed183': 'a82edc340bc73447bac16cdfed0a4c62'
-            } ,
-   tvmaria: {
-        number: 78,
+            }
+        }
+    },
+    tvmaria: {
+        number: 66,
         name: "TV Maria",
         url: "https://qp-pldt-live-grp-07-prod.akamaized.net/out/u/tvmaria_prd.mpd",
         drmConfig: {
-      clearKeys: {
+            clearKeys: {
                 'fa3998b9a4de40659725ebc5151250d6': '998f1294b122bbf1a96c1ddc0cbb229f'
-            } ,
- tvup:   {
-        number: 79,
+            }
+        }
+    },
+    tvup: {
+        number: 67,
         name: "TVUP",
         url: "https://qp-pldt-live-grp-09-prod.akamaized.net/out/u/tvup_prd.mpd",
         drmConfig: {
-      clearKeys: {
+            clearKeys: {
                 '83e813ccd4ca4837afd611037af02f63': 'a97c515dbcb5dcbc432bbd09d15afd41'
-            } ,
-spotvhd:    {
-        number: 80,
+            }
+        }
+    },
+    spotvhd: {
+        number: 68,
         name: "SPOTV HD",
         url: "https://qp-pldt-live-grp-11-prod.akamaized.net/out/u/dr_spotvhd.mpd",
         drmConfig: {
-      clearKeys: {
+            clearKeys: {
                 'ec7ee27d83764e4b845c48cca31c8eef': '9c0e4191203fccb0fde34ee29999129e'
-            } ,
- spotv2hd:   {
-        number: 81,
+            }
+        }
+    },
+    spotv2hd: {
+        number: 69,
         name: "SPOTV 2 HD",
         url: "https://qp-pldt-live-grp-13-prod.akamaized.net/out/u/dr_spotv2hd.mpd",
         drmConfig: {
-      clearKeys: {
+            clearKeys: {
                 '7eea72d6075245a99ee3255603d58853': '6848ef60575579bf4d415db1032153ed'
-            } ,
-rockextreme:    {
-        number: 82,
+            }
+        }
+    },
+    rockextreme: {
+        number: 70,
         name: "Rock Extreme",
         url: "https://qp-pldt-live-grp-13-prod.akamaized.net/out/u/dr_rockextreme.mpd",
         drmConfig: {
-      clearKeys: {
+            clearKeys: {
                 '0f852fb8412b11edb8780242ac120002': '4cbc004d8c444f9f996db42059ce8178'
-            } ,
-techstorm:    {
-        number: 83,
-        name: "TechStorm",
-        url: "https://qp-pldt-live-grp-11-prod.akamaized.net/out/u/dr_tech_storm.mpd",
-        drmConfig: {
-      clearKeys: {
-                '5675d85ce6754ba6aa8f6acc4660f76f': '140bfb365cf143c349f68699238a610c"
             }
         }
     }
@@ -790,7 +821,7 @@ function changeChannel(channelId) {
     errorMessage.style.display = 'none';
     channelInfo.textContent = `${channel.number}. ${channel.name}`;
     channelInfo.style.display = 'block';
-    document.title = `${channel.name} - Türk TV`;
+    document.title = `${channel.name} - TV`;
     
     video.style.display = 'block';
     
@@ -808,7 +839,7 @@ document.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => {
         const video = document.getElementById('video-player');
         video.volume = currentVolume;
-        changeChannel('trt1');
+        changeChannel('tv5hd');
         // Add click event listener for mobile devices
         video.addEventListener('click', () => {
             if (video.paused) {
@@ -891,7 +922,7 @@ function togglePower() {
         screen.classList.remove('off');
         powerBtn.classList.remove('off');
         video.style.display = 'block';
-        setTimeout(() => changeChannel('trt1'), 100); // Auto play TRT 1 when powered on
+        setTimeout(() => changeChannel('tv5hd'), 100); // Auto play TV5 HD when powered on
     }
 }
 
@@ -903,8 +934,8 @@ function changeChannelRelative(direction) {
     let nextChannelNumber = currentChannel.number + direction;
     
     // Handle wraparound
-    if (nextChannelNumber < 1) nextChannelNumber = 15;
-    if (nextChannelNumber > 15) nextChannelNumber = 1;
+    if (nextChannelNumber < 1) nextChannelNumber = 70;
+    if (nextChannelNumber > 70) nextChannelNumber = 1;
     
     // Find channel by number
     const nextChannel = Object.entries(channels).find(([_, channel]) => 
@@ -1037,7 +1068,7 @@ function hideInterface(type) {
 }
 
 // Update click event listener to include keyboard overlay
-document.addEventListener('click', function(event) {
+document.addEventListener('click', (event) => {
     const channelList = document.getElementById('channel-list');
     const remoteControl = document.getElementById('remote-container');
     const menuOverlay = document.getElementById('menu-overlay');
@@ -1070,20 +1101,20 @@ document.addEventListener('click', function(event) {
 });
 
 // Add click stop propagation for keyboard overlay
-document.getElementById('keyboard-overlay').addEventListener('click', function(event) {
+document.getElementById('keyboard-overlay').addEventListener('click', (event) => {
     event.stopPropagation();
 });
 
 // Prevent clicks inside elements from bubbling up and triggering the hide
-document.getElementById('channel-list').addEventListener('click', function(event) {
+document.getElementById('channel-list').addEventListener('click', (event) => {
     event.stopPropagation();
 });
 
-document.getElementById('remote-container').addEventListener('click', function(event) {
+document.getElementById('remote-container').addEventListener('click', (event) => {
     event.stopPropagation();
 });
 
-document.getElementById('menu-overlay').addEventListener('click', function(event) {
+document.getElementById('menu-overlay').addEventListener('click', (event) => {
     event.stopPropagation();
 });
 
