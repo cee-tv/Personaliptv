@@ -42,15 +42,15 @@
         <button class="remote-button" onclick="inputChannel(0)">0</button>
     </div>
     
-    <div class="volume-buttons">
-        <button class="volume-button" onclick="adjustVolume(-0.1)">VOL-</button>
-        <button class="volume-button" onclick="adjustVolume(0.1)">VOL+</button>
-    </div>
-    
-    <div class="channel-buttons">
-        <div class="channel-nav">
-            <button class="channel-nav-button" onclick="changeChannelRelative(-1)">◀ CHANNEL</button>
-            <button class="channel-nav-button" onclick="changeChannelRelative(1)">CHANNEL ▶</button>
+    <div class="channel-nav">
+        <div class="volume-controls">
+            <button class="volume-button" onclick="adjustVolume(0.1)">VOL+</button>
+            <button class="volume-button" onclick="adjustVolume(-0.1)">VOL-</button>
+        </div>
+        
+        <div class="channel-controls">
+            <button class="channel-nav-button" onclick="changeChannelRelative(-1)">▲CH</button>
+            <button class="channel-nav-button" onclick="changeChannelRelative(1)">CH▼</button>
         </div>
     </div>
 </div>
