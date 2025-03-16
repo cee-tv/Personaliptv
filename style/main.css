@@ -123,7 +123,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 12px;
+    gap: 20px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.5);
     border: 1px solid #444;
     transition: opacity 0.3s ease;
@@ -168,11 +168,12 @@ body {
 .volume-buttons {
     display: flex;
     gap: 15px;
-    width: 75%;
+    width: 80%;
     justify-content: center;
     background: rgba(0,0,0,0.15);
     padding: 8px;
     border-radius: 15px;
+    margin: 10px 0;
 }
 
 .volume-button {
@@ -192,21 +193,29 @@ body {
     transform: scale(1.1);
 }
 
-.channel-buttons {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    width: 80%;
-}
-
 .channel-nav {
     display: flex;
-    flex-direction: column;
-    gap: 6px;
+    flex-direction: row;
+    gap: 15px;
     width: 80%;
-    justify-content: center;
+    justify-content: space-between;
 }
 
+.volume-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 45%;
+}
+
+.channel-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 45%;
+}
+
+.volume-button,
 .channel-nav-button {
     background: linear-gradient(145deg, #333, #222);
     border: 1px solid #444;
@@ -221,6 +230,12 @@ body {
     box-shadow: 0 2px 4px rgba(0,0,0,0.3);
 }
 
+.volume-button:hover,
+.channel-nav-button:hover {
+    background: #666;
+    transform: scale(1.05);
+}
+
 .remote-container::before {
     content: "TÜRK TV";
     position: absolute;
@@ -230,9 +245,8 @@ body {
     letter-spacing: 1px;
 }
 
-.channel-nav-button:hover {
-    background: #666;
-    transform: scale(1.05);
+.channel-buttons {
+    display: none;
 }
 
 .volume-indicator {
@@ -459,7 +473,9 @@ body {
         right: 20px;
         top: 50%;
         transform: translateY(-50%);
-        height: var(--remote-height);
+        width: 240px; /* Same as mobile width */
+        height: auto;
+        max-height: 80vh;
     }
 
     .remote-container.hidden {
@@ -470,6 +486,43 @@ body {
     
     .remote-container:hover {
         transform: translateY(-50%);
+    }
+
+    .channel-nav {
+        width: 85%;
+    }
+
+    .volume-controls,
+    .channel-controls {
+        width: 45%;
+    }
+    
+    .channel-pad {
+        width: 85%;
+        gap: 6px;
+        padding: 6px;
+    }
+
+    .volume-buttons {
+        width: 85%;
+        gap: 10px;
+        padding: 6px;
+    }
+
+    .channel-nav {
+        width: 85%;
+        align-items: center;
+    }
+
+    .channel-nav-button {
+        width: 80%;
+    }
+    
+    .remote-button,
+    .volume-button,
+    .channel-nav-button {
+        font-size: 0.8em;
+        padding: 5px;
     }
 }
     
@@ -497,8 +550,8 @@ body {
     right: 20px;
     transform: translateY(-50%);
     background: rgba(0,0,0,0.8);
-    padding: 20px;
-    border-radius: 10px;
+    padding: 15px;  
+    border-radius: 8px;  
     display: none;
     z-index: 1000;
 }
@@ -506,19 +559,19 @@ body {
 .menu-buttons {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 8px;  
 }
 
 .menu-option {
     background: linear-gradient(145deg, #333, #222);
     border: 1px solid #444;
-    border-radius: 8px;
+    border-radius: 6px;  
     color: white;
-    padding: 12px 25px;
+    padding: 8px 15px;  
     cursor: pointer;
     transition: all 0.3s ease;
-    font-size: 1em;
-    min-width: 180px;
+    font-size: 0.9em;  
+    min-width: 150px;  
     text-align: center;
 }
 
@@ -597,49 +650,50 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     background: rgba(0,0,0,0.9);
-    padding: 30px;
-    border-radius: 15px;
+    padding: 20px;
+    border-radius: 12px;
     display: none;
     z-index: 1000;
-    max-width: 400px;
-    width: 90%;
+    max-width: 300px;
+    width: 85%;
 }
 
 .keyboard-guide {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 8px;
 }
 
 .keyboard-guide-title {
-    font-size: 1.4em;
+    font-size: 1.1em;
     font-weight: bold;
     text-align: center;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     border-bottom: 1px solid rgba(255,255,255,0.2);
-    padding-bottom: 10px;
+    padding-bottom: 8px;
 }
 
 .keyboard-guide-item {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 15px;
+    font-size: 0.9em;
 }
 
 .keyboard-guide-key {
     background: linear-gradient(145deg, #333, #222);
     border: 1px solid #444;
-    border-radius: 8px;
+    border-radius: 6px;
     color: white;
-    padding: 8px 15px;
-    font-size: 1.1em;
-    min-width: 50px;
+    padding: 4px 8px;
+    font-size: 0.9em;
+    min-width: 30px;
     text-align: center;
 }
 
 @media (max-width: 768px) {
     .keyboard-overlay {
-        width: 85%;
-        padding: 20px;
+        width: 80%;
+        padding: 15px;
     }
 }
