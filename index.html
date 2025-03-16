@@ -1,5 +1,6 @@
 <html>
 <head>
+    <base href="https://">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Türk Televizyonu</title>
@@ -105,23 +106,131 @@
 <div class="channel-list" id="channel-list" style="display: none;">
     <button class="close-button" onclick="hideInterface('channels')">&times;</button>
     <h3>Channel List</h3>
-    <ul>
-        <li onclick="changeChannel('trt1')">1. TV5 HD</li>
-        <li onclick="changeChannel('trthaber')">2. RPTV HD</li>
-        <li onclick="changeChannel('trtspor')">3. True FM TV</li>
-        <li onclick="changeChannel('trtbelgesel')">4. PTV 4</li>
-        <li onclick="changeChannel('trtcocuk')">5. IBC 13</li>
-        <li onclick="changeChannel('showtv')">6. A2Z</li>
-        <li onclick="changeChannel('startv')">7. One PH</li>
-        <li onclick="changeChannel('tv8')">8. One News</li>
-        <li onclick="changeChannel('beyaztv')">9. Buko</li>
-        <li onclick="changeChannel('ntv')">10. Sari-Sari</li>
-        <li onclick="changeChannel('trt2')">11. PBA Rush</li>
-        <li onclick="changeChannel('haberturk')">12. One Sports HD</li>
-        <li onclick="changeChannel('numberone')">13. One Sports+</li>
-        <li onclick="changeChannel('trtmuzik')">14. UAAP Varsity Channel</li>
-        <li onclick="changeChannel('viva')">15. MPTV</li>
-    </ul>
+    <div class="channel-categories">
+        <!-- Local Channels -->
+        <div class="category">
+            <h4>Local Channels</h4>
+            <ul>
+                <li onclick="changeChannel('tv5hd')">1. TV5 HD</li>
+                <li onclick="changeChannel('ptv4')">2. PTV 4</li>
+                <li onclick="changeChannel('ibc13')">3. IBC 13</li>
+                <li onclick="changeChannel('a2z')">4. A2Z</li>
+                <li onclick="changeChannel('buko')">5. Buko</li>
+                <li onclick="changeChannel('sarisari')">6. Sari-Sari</li>
+            </ul>
+        </div>
+
+        <!-- News and Information -->
+        <div class="category">
+            <h4>News and Information</h4>
+            <ul>
+                <li onclick="changeChannel('oneph2')">7. One PH</li>
+                <li onclick="changeChannel('onenews2')">8. One News</li>
+                <li onclick="changeChannel('rptvhd2')">9. RPTV HD</li>
+                <li onclick="changeChannel('bilyonaryonewschannel')">10. Bilyonaryo News Channel</li>
+                <li onclick="changeChannel('aljazeera')">11. Al Jazeera</li>
+                <li onclick="changeChannel('bloomberg')">12. Bloomberg</li>
+                <li onclick="changeChannel('cna')">13. CNA</li>
+                <li onclick="changeChannel('cnnhd')">14. CNN HD</li>
+                <li onclick="changeChannel('cctv4')">15. CCTV 4</li>
+                <li onclick="changeChannel('france24')">16. France 24</li>
+                <li onclick="changeChannel('bbcnews')">17. BBC News</li>
+            </ul>
+        </div>
+
+        <!-- Sports -->
+        <div class="category">
+            <h4>Sports</h4>
+            <ul>
+                <li onclick="changeChannel('premiersportshd')">18. Premier Sports HD</li>
+                <li onclick="changeChannel('spotvhd')">19. SPOTV HD</li>
+                <li onclick="changeChannel('spotv2hd')">20. SPOTV 2 HD</li>
+            </ul>
+        </div>
+
+        <!-- Movies -->
+        <div class="category">
+            <h4>Movies</h4>
+            <ul>
+                <li onclick="changeChannel('hbohd')">21. HBO HD</li>
+                <li onclick="changeChannel('hbosignaturehd')">22. HBO Signature HD</li>
+                <li onclick="changeChannel('hbohitshd')">23. HBO Hits HD</li>
+                <li onclick="changeChannel('hbofamilyhd')">24. HBO Family HD</li>
+                <li onclick="changeChannel('cinemaxhd')">25. Cinemax HD</li>
+                <li onclick="changeChannel('hitsmovies')">26. HITS Movies</li>
+                <li onclick="changeChannel('tvnmoviespinoy')">27. tvN Movies Pinoy</li>
+                <li onclick="changeChannel('tapmovieshd')">28. TAP Movies HD</li>
+                <li onclick="changeChannel('tapactionflixhd')">29. Tap Action Flix HD</li>
+                <li onclick="changeChannel('tagalizedmoviechannel')">30. Tagalized Movie Channel</li>
+                <li onclick="changeChannel('vivacinema')">31. Viva Cinema</li>
+                <li onclick="changeChannel('pinoyboxoffice')">32. Pinoy Box Office</li>
+            </ul>
+        </div>
+
+        <!-- Kids -->
+        <div class="category">
+            <h4>Kids</h4>
+            <ul>
+                <li onclick="changeChannel('animax')">33. Animax</li>
+                <li onclick="changeChannel('dreamworkshd')">34. DreamWorks HD</li>
+                <li onclick="changeChannel('dreamworkstagalized')">35. DreamWorks (Tagalized)</li>
+                <li onclick="changeChannel('moonbugkids')">36. Moonbug Kids</li>
+                <li onclick="changeChannel('nickelodeonsd')">37. Nickelodeon SD</li>
+                <li onclick="changeChannel('nickjr')">38. Nick Jr</li>
+                <li onclick="changeChannel('cartoonnetworkhd')">39. Cartoon Network HD</li>
+            </ul>
+        </div>
+
+        <!-- General Entertainment -->
+        <div class="category">
+            <h4>General Entertainment</h4>
+            <ul>
+                <li onclick="changeChannel('warnertvhd')">40. Warner TV HD</li>
+                <li onclick="changeChannel('tvnpremiumhd')">41. tvN Premium HD</li>
+                <li onclick="changeChannel('kbsworldsd')">42. KBS World SD</li>
+                <li onclick="changeChannel('axn')">43. AXN</li>
+                <li onclick="changeChannel('hitshd')">44. Hits HD</li>
+                <li onclick="changeChannel('hitsnow')">45. HITS Now</li>
+                <li onclick="changeChannel('lifetimesd')">46. Lifetime SD</li>
+                <li onclick="changeChannel('rockentertainment')">47. Rock Entertainment</li>
+                <li onclick="changeChannel('rockextreme')">48. Rock Extreme</li>
+                <li onclick="changeChannel('taptv')">49. Tap TV</li>
+                <li onclick="changeChannel('thrillsd')">50. Thrill SD</li>
+                <li onclick="changeChannel('lotusmacau')">51. Lotus Macau</li>
+                <li onclick="changeChannel('kixhd')">52. Kix HD</li>
+            </ul>
+        </div>
+
+        <!-- Lifestyle -->
+        <div class="category">
+            <h4>Lifestyle</h4>
+            <ul>
+                <li onclick="changeChannel('asianfoodnetwork')">53. Asian Food Network</li>
+            </ul>
+        </div>
+
+        <!-- Educational & Documentary -->
+        <div class="category">
+            <h4>Educational & Documentary</h4>
+            <ul>
+                <li onclick="changeChannel('knowledgechannel')">54. Knowledge Channel</li>
+                <li onclick="changeChannel('bbcearthhd')">55. BBC Earth HD</li>
+                <li onclick="changeChannel('discoverychannelsd')">56. Discovery Channel SD</li>
+                <li onclick="changeChannel('animalplanet')">57. Animal Planet</li>
+                <li onclick="changeChannel('travelchannelsd')">58. Travel Channel SD</li>
+                <li onclick="changeChannel('crimeinvestigation')">59. Crime & Investigation</li>
+            </ul>
+        </div>
+
+        <!-- Religious Channels -->
+        <div class="category">
+            <h4>Religious Channels</h4>
+            <ul>
+                <li onclick="changeChannel('tvmaria')">60. TV Maria</li>
+                <li onclick="changeChannel('tvup')">61. TVUP</li>
+            </ul>
+        </div>
+    </div>
 </div>
 
 <script src="script/app.js"></script>
