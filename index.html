@@ -1,0 +1,130 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Türk Televizyonu</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.3.6/shaka-player.compiled.js"></script>
+    <link rel="stylesheet" href="style/main.css">
+</head>
+<body>
+
+<div class="tv-container">
+    <div class="tv-frame">
+        <div class="screen" id="tv-screen">
+            <video id="video-player" controls playsinline></video>
+            <div class="channel-info" id="channel-info"></div>
+            <div class="channel-input" id="channel-input"></div>
+            <div class="error-message" id="error-message">
+                Channel failed to load. Please try another channel.
+            </div>
+            <div class="volume-indicator" id="volume-indicator"></div>
+            <iframe id="youtube-embed" src="" 
+                style="display:none;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                allowfullscreen></iframe>
+        </div>
+    </div>
+</div>
+
+<div class="remote-container hidden" id="remote-container">
+    <button class="close-button" onclick="hideInterface('remote')">&times;</button>
+    <button class="remote-power" onclick="togglePower()" title="Power"></button>
+    
+    <div class="channel-pad">
+        <button class="remote-button" onclick="inputChannel(1)">1</button>
+        <button class="remote-button" onclick="inputChannel(2)">2</button>
+        <button class="remote-button" onclick="inputChannel(3)">3</button>
+        <button class="remote-button" onclick="inputChannel(4)">4</button>
+        <button class="remote-button" onclick="inputChannel(5)">5</button>
+        <button class="remote-button" onclick="inputChannel(6)">6</button>
+        <button class="remote-button" onclick="inputChannel(7)">7</button>
+        <button class="remote-button" onclick="inputChannel(8)">8</button>
+        <button class="remote-button" onclick="inputChannel(9)">9</button>
+        <button class="remote-button" onclick="inputChannel(0)">0</button>
+    </div>
+    
+    <div class="volume-buttons">
+        <button class="volume-button" onclick="adjustVolume(-0.1)">VOL-</button>
+        <button class="volume-button" onclick="adjustVolume(0.1)">VOL+</button>
+    </div>
+    
+    <div class="channel-buttons">
+        <div class="channel-nav">
+            <button class="channel-nav-button" onclick="changeChannelRelative(-1)">◀ CHANNEL</button>
+            <button class="channel-nav-button" onclick="changeChannelRelative(1)">CHANNEL ▶</button>
+        </div>
+    </div>
+</div>
+
+<button id="toggle-menu" class="toggle-menu-btn">
+    ☰
+</button>
+
+<div class="menu-overlay" id="menu-overlay">
+    <div class="menu-buttons">
+        <button class="menu-option" onclick="toggleInterface('remote')">Remote Control</button>
+        <button class="menu-option" onclick="toggleInterface('channels')">Channel List</button>
+        <button class="menu-option" onclick="toggleInterface('keyboard')">Keyboard Controls</button>
+    </div>
+</div>
+
+<div class="keyboard-overlay" id="keyboard-overlay">
+    <button class="close-button" onclick="hideInterface('keyboard')">&times;</button>
+    <div class="keyboard-guide">
+        <div class="keyboard-guide-title">Keyboard Controls</div>
+        <div class="keyboard-guide-item">
+            <span class="keyboard-guide-key">P</span>
+            <span>Power on/off</span>
+        </div>
+        <div class="keyboard-guide-item">
+            <span class="keyboard-guide-key">↑/↓</span>
+            <span>Change channel</span>
+        </div>
+        <div class="keyboard-guide-item">
+            <span class="keyboard-guide-key">←/→</span>
+            <span>Volume control</span>
+        </div>
+        <div class="keyboard-guide-item">
+            <span class="keyboard-guide-key">0-9</span>
+            <span>Channel number</span>
+        </div>
+        <div class="keyboard-guide-item">
+            <span class="keyboard-guide-key">M</span>
+            <span>Mute/Unmute</span>
+        </div>
+        <div class="keyboard-guide-item">
+            <span class="keyboard-guide-key">L</span>
+            <span>Channel list</span>
+        </div>
+        <div class="keyboard-guide-item">
+            <span class="keyboard-guide-key">R</span>
+            <span>Remote control</span>
+        </div>
+    </div>
+</div>
+
+<div class="channel-list" id="channel-list" style="display: none;">
+    <button class="close-button" onclick="hideInterface('channels')">&times;</button>
+    <h3>Channel List</h3>
+    <ul>
+        <li onclick="changeChannel('trt1')">1. TRT 1</li>
+        <li onclick="changeChannel('trthaber')">2. TRT Haber</li>
+        <li onclick="changeChannel('trtspor')">3. TRT Spor</li>
+        <li onclick="changeChannel('trtbelgesel')">4. TRT Belgesel</li>
+        <li onclick="changeChannel('trtcocuk')">5. TRT Çocuk</li>
+        <li onclick="changeChannel('showtv')">6. Show TV</li>
+        <li onclick="changeChannel('startv')">7. Star TV</li>
+        <li onclick="changeChannel('tv8')">8. TV8</li>
+        <li onclick="changeChannel('beyaztv')">9. Beyaz TV</li>
+        <li onclick="changeChannel('ntv')">10. NTV</li>
+        <li onclick="changeChannel('trt2')">11. TRT 2</li>
+        <li onclick="changeChannel('haberturk')">12. Habertürk</li>
+        <li onclick="changeChannel('numberone')">13. Number One</li>
+        <li onclick="changeChannel('trtmuzik')">14. TRT Müzik</li>
+        <li onclick="changeChannel('viva')">15. Viva</li>
+    </ul>
+</div>
+
+<script src="script/app.js"></script>
+
+</body>
+</html>
